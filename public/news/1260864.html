@@ -49,10 +49,10 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .orig-body img{max-width:100%}
 .site-foot{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:20px 0;text-align:center}
 .qq-line{margin-top:6px;font-size:13px}
-.qq-link{color:var(--accent);font-weight:600;text-decoration:none}
-.qq-link:hover{text-decoration:underline}
-.qq-qr{display:inline-flex;flex-direction:column;align-items:center;gap:6px;margin-top:12px}
-.qq-qr-img{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);border-radius:8px;padding:5px;background:#fff;display:block}
+.qq-trigger{position:relative;display:inline-block;cursor:pointer;color:var(--accent);font-weight:600;border-bottom:1px dashed var(--accent)}
+.qq-popup{display:none;position:absolute;left:50%;bottom:150%;transform:translateX(-50%);z-index:50;flex-direction:column;align-items:center;gap:6px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.18);white-space:nowrap}
+.qq-trigger:hover .qq-popup,.qq-trigger:focus .qq-popup{display:flex}
+.qq-qr-img{width:140px;height:140px;object-fit:contain;border:1px solid var(--line);border-radius:8px;padding:5px;background:#fff;display:block}
 .qr-tip{font-size:11px;color:var(--muted)}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
@@ -80,6 +80,6 @@ I’m sharing my project: a <b>full native x64 migration of the FlyFF v21 source
 This work is based on the original source...<br />
 <br />
 <a href="https://forum.ragezone.com/threads/flyff-v21-%E2%80%93-native-x64-migration.1260864/" class="link link--internal">Read more</a></div></div></details><p class="foot"><a class="ext" href="https://forum.ragezone.com/threads/flyff-v21-%E2%80%93-native-x64-migration.1260864/" target="_blank" rel="noopener">查看原文 ↗</a></p></article></main>
-<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有<div class="qq-line">如有技术要求，可扫码或搜索添加站长 QQ：<span class="qq-num">225314824</span>（镍仔杭）<div class="qq-qr"><img class="qq-qr-img" src="../assets/94DAEC8884C9D819D6BC526BBD2CE032.jpg" alt="站长 QQ 二维码（镍仔杭）"><span class="qr-tip">手机扫一扫，添加站长 QQ</span></div></div></div></footer>
+<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有<div class="qq-line"><span class="qq-trigger">如有任何技术需求或者服务需要，请联系站长<span class="qq-popup"><img class="qq-qr-img" src="../assets/94DAEC8884C9D819D6BC526BBD2CE032.jpg" alt="站长 QQ 二维码（镍仔杭）"><span class="qr-tip">手机扫一扫，添加站长 QQ：225314824（镍仔杭）</span></span></span></div></div></footer>
 </body>
 </html>

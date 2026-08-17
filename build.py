@@ -94,10 +94,10 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .orig-body img{max-width:100%}
 .site-foot{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:20px 0;text-align:center}
 .qq-line{margin-top:6px;font-size:13px}
-.qq-link{color:var(--accent);font-weight:600;text-decoration:none}
-.qq-link:hover{text-decoration:underline}
-.qq-qr{display:inline-flex;flex-direction:column;align-items:center;gap:6px;margin-top:12px}
-.qq-qr-img{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);border-radius:8px;padding:5px;background:#fff;display:block}
+.qq-trigger{position:relative;display:inline-block;cursor:pointer;color:var(--accent);font-weight:600;border-bottom:1px dashed var(--accent)}
+.qq-popup{display:none;position:absolute;left:50%;bottom:150%;transform:translateX(-50%);z-index:50;flex-direction:column;align-items:center;gap:6px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.18);white-space:nowrap}
+.qq-trigger:hover .qq-popup,.qq-trigger:focus .qq-popup{display:flex}
+.qq-qr-img{width:140px;height:140px;object-fit:contain;border:1px solid var(--line);border-radius:8px;padding:5px;background:#fff;display:block}
 .qr-tip{font-size:11px;color:var(--muted)}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
@@ -142,16 +142,16 @@ def render_page(cfg, page_title, content, nav_active="", assets_path="assets/"):
         qr_html = ""
         if qr:
             qr_html = (
-                f'<div class="qq-qr"><img class="qq-qr-img" '
-                f'src="{esc(assets_path + qr)}" '
+                f'<span class="qq-popup">'
+                f'<img class="qq-qr-img" src="{esc(assets_path + qr)}" '
                 f'alt="站长 QQ 二维码（{esc(qqname or qq)}）">'
-                f'<span class="qr-tip">手机扫一扫，添加站长 QQ</span></div>'
+                f'<span class="qr-tip">手机扫一扫，添加站长 QQ：{esc(qq)}'
+                + (f"（{esc(qqname)}）" if qqname else "")
+                + "</span></span>"
             )
         qq_line = (
-            f'<div class="qq-line">{esc(tip)}：'
-            f'<span class="qq-num">{esc(qq)}</span>'
-            + (f"（{esc(qqname)}）" if qqname else "")
-            + qr_html
+            f'<div class="qq-line">'
+            f'<span class="qq-trigger">{esc(tip)}{qr_html}</span>'
             + "</div>"
         )
     else:
