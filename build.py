@@ -134,11 +134,14 @@ def render_page(cfg, page_title, content, nav_active=""):
     qq = owner.get("qq", "")
     qqname = owner.get("name", "")
     tip = owner.get("tip", "如有技术要求，可添加站长 QQ 咨询")
+    # 优先用官方网页临时会话入口（wpa.qq.com），兼容性优于已失效的 tencent:// 本地协议；
+    # 未配置则回退到 tencent://message/?uin= 协议唤起本机 QQ。
+    chat_url = owner.get("chat_url") or (f"tencent://message/?uin={qq}" if qq else "")
     if qq:
         qq_line = (
             f'<div class="qq-line">{esc(tip)}：'
-            f'<a class="qq-link" href="tencent://message/?uin={esc(qq)}" '
-            f'title="点击发起 QQ 会话">{esc(qq)}</a>'
+            f'<a class="qq-link" href="{esc(chat_url)}" target="_blank" '
+            f'rel="noopener" title="点击发起 QQ 会话">{esc(qq)}</a>'
             + (f"（{esc(qqname)}）" if qqname else "")
             + "</div>"
         )
