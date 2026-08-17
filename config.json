@@ -13,5 +13,9 @@
       "category": "release"
     }
   ],
-  "hot_threshold": 30
+  "hot_threshold": 30,
+  "hover_tip": {
+    "text": "加QQ 225314824 镍仔杭",
+    "keywords": ["技术", "攻击", "防御", "服务器", "源码", "服务端", "改造", "开服"]
+  }
 }
