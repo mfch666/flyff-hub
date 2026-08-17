@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "Hello,\n\nI am releasing my latest corrected files. They are very stable and clean, although they are still in French since I am French.\n\nThis release includes most of the systems I developed, such as the Factors systems, my own CODEX system,",
   "body_html": "<div class=\"bbWrapper\">Hello,<br />\n<br />\nI am releasing my latest corrected files. They are very stable and clean, although they are still in French since I am French.<br />\n<br />\nThis release includes most of the systems I developed, such as the Factors systems, my own CODEX system, and...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/reborn-v2-reworked.1265897/\" class=\"link link--internal\">Read more</a></div>",
-  "slug": "1265897"
+  "needs_translation": false,
+  "slug": "1265897",
+  "title_zh": "【Reborn V2】重制版",
+  "excerpt_zh": "Zacks 发布最新修正版文件，非常稳定干净，但说明仍为法文（作者为法国人），含自研 CODEX 等系统。",
+  "summary_zh": "Zacks 发布其最新修正版 Reborn V2 文件，整体非常稳定、干净。由于作者是法国人，当前说明文字仍为法文。该版本包含作者自研的多数系统，如 Factors 系统、自有 CODEX 系统等。"
 }

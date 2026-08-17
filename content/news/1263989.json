@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "Hello everyone, here are the complete Florist 2026 files:\n\n \n\n\n\n\t\n\t\tTo view the content, you need to sign In or register.\n\t\n\n\n\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\t\t\n\t\n\n\t\n\n\n\n\n\t\n\t\tC++:\n\t\n\t\n\t\t// Config\n#define    __VER 18                                    //| &q",
   "body_html": "<div class=\"bbWrapper\">Hello everyone, here are the complete Florist 2026 files:<br />\n<br />\n \n\n\n<div class=\"bbCodeBlock bbCodeBlock--expandable bbCodeBlock--hidden\">\n\t<div class=\"bbCodeBlock-content\">\n\t\tTo view the content, you need to <a href=\"/login/\" data-xf-click=\"overlay\">sign In</a> or <a href=\"/login/register\" data-xf-click=\"overlay\">register</a>.\n\t</div>\n</div><br />\n<br />\n<br />\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\t\t\n\t\n\n\t\n\n\n\n<div class=\"bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code\">\n\t<div class=\"bbCodeBlock-title\">\n\t\tC++:\n\t</div>\n\t<div class=\"bbCodeBlock-content\" dir=\"ltr\">\n\t\t<pre class=\"bbCodeCode\" dir=\"ltr\" data-xf-init=\"ozzmodz-cbhj-code-block\" data-lang=\"cpp\"><code>// Config\n#define    __VER 18                                    //| &quot;Version&quot;\n#define __LOCAL_TESTS TRUE                            //|...</code></pre>\n\t</div>\n</div><br />\n<a href=\"https://forum.ragezone.com/threads/new-full-files-florist-2026.1263989/\" class=\"link link--internal\">Read more</a></div>",
-  "slug": "2026"
+  "needs_translation": false,
+  "slug": "1263989",
+  "title_zh": "Florist 2026 完整文件（新版）",
+  "excerpt_zh": "Zacks 放出完整的 Florist 2026 服务端文件（部分链接需登录查看）。",
+  "summary_zh": "Zacks 放出了完整的 Florist 2026 服务端文件，包含完整配置（如版本宏 __VER 18、本地测试宏等）。部分下载内容需要登录论坛后才能查看。"
 }

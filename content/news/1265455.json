@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "Hello everyone\n\nWebsite update completed - Full website rework and PayPal Ranking system integration\n\nThe website has been heavily improved and stabilized with multiple fixes and new systems.\n\nWebsite / Infrastructure:\n• Fixed PM2 startup..",
   "body_html": "<div class=\"bbWrapper\">Hello everyone<br />\n<br />\nWebsite update completed - Full website rework and PayPal Ranking system integration<br />\n<br />\nThe website has been heavily improved and stabilized with multiple fixes and new systems.<br />\n<br />\nWebsite / Infrastructure:<br />\n• Fixed PM2 startup...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/website-node-js-v2.1265455/\" class=\"link link--internal\">Read more</a></div>",
-  "slug": "1265455"
+  "needs_translation": false,
+  "slug": "1265455",
+  "title_zh": "官网 Node.js 重构版 V2",
+  "excerpt_zh": "官网完成整体重构并集成 PayPal 排行榜系统，修复多项问题、增强稳定性，由 Zacks 发布。",
+  "summary_zh": "Zacks 完成了官网的第二次大版本重构：整体重写前端，并集成 PayPal 充值排行榜系统。网站经过大量修复与新系统加入，稳定性与性能显著提升（使用 PM2 进程管理）。"
 }

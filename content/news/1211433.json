@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "Files florist Re Release.\n\nlink : \n\n \n\n\n\n\t\n\t\tTo view the content, you need to sign In or register.\n\t\n\n\n\nServerCommon.h\n\nLink : \n\n\nPassword : RageZone",
   "body_html": "<div class=\"bbWrapper\">Files florist Re Release.<br />\n<br />\nlink : <br />\n<br />\n \n\n\n<div class=\"bbCodeBlock bbCodeBlock--expandable bbCodeBlock--hidden\">\n\t<div class=\"bbCodeBlock-content\">\n\t\tTo view the content, you need to <a href=\"/login/\" data-xf-click=\"overlay\">sign In</a> or <a href=\"/login/register\" data-xf-click=\"overlay\">register</a>.\n\t</div>\n</div><br />\n<br />\n<br />\nServerCommon.h<br />\n<br />\nLink : <span data-s9e-mediaembed=\"googledrive\"><span style=\"padding-bottom:75%\"><iframe allowfullscreen=\"\" scrolling=\"no\" src=\"//drive.google.com/file/d/1S_o9wE-6_HYTtx4XqYqNhQpdWvdwkFH8/preview\"></iframe></span></span><br />\n<br />\n<br />\n<span style=\"color: #ff0000\">Password : RageZone</span></div>",
-  "slug": "1211433"
+  "needs_translation": false,
+  "slug": "1211433",
+  "title_zh": "【Florist 文件】完整整合包",
+  "excerpt_zh": "Zacks 重新发布 Florist 全套文件，含 ServerCommon.h，部分链接需登录或密码查看。",
+  "summary_zh": "Zacks 重新放出 Florist 全套服务端文件，包含 ServerCommon.h 等关键文件。部分下载链接需要登录论坛或输入密码（密码为 RageZone）才能查看。"
 }

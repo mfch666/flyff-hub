@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Flyff 站点采集器：RageZone RSS（稳定主线）+ ruiwoo API（尽力采集）。
+"""Flyff 站点采集器：仅对接 RageZone FlyFF Releases RSS。
+
 采集结果写入 content/news/<slug>.json，按 URL 去重（state/seen.json）。
-失败不中断：ruiwoo 接口当前对服务端请求返回 500，会自动跳过并提示。
+新条目会带上 needs_translation=true，交给翻译步骤（agent 在自动化中完成，
+或人工/交互式运行 collect_and_translate）用准确中文重写标题与摘要。
+英文原文（body_html）始终保留，供详情页「原文」区块展示。
 """
 import json
 import re
 import os
 import html
 import urllib.request
-import urllib.parse
 import email.utils
 from datetime import datetime
 from pathlib import Path
@@ -47,11 +49,11 @@ def save_seen(seen):
     SEEN.write_text(json.dumps(seen, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def fetch(url, data=None, headers=None, timeout=30):
+def fetch(url, headers=None, timeout=30):
     h = {"User-Agent": UA, "Accept": "*/*"}
     if headers:
         h.update(headers)
-    req = urllib.request.Request(url, data=data, headers=h)
+    req = urllib.request.Request(url, headers=h)
     return urllib.request.urlopen(req, timeout=timeout).read()
 
 
@@ -60,9 +62,11 @@ def strip_tags(s):
 
 
 def slugify(link, fallback=""):
-    m = re.search(r"(\d{4,})", link or "")
-    if m:
-        return m.group(1)
+    # RageZone 帖子 URL 形如 .../threads/<slug>.<帖子ID>/，取最后一个 4+ 位数字作为 ID，
+    # 避免把标题里的年份（如 q2-2024 / 2026）误当成 slug。
+    nums = re.findall(r"(\d{4,})", link or "")
+    if nums:
+        return nums[-1]
     base = re.sub(r"\W+", "-", (link or fallback))[:40].strip("-")
     return base or "item"
 
@@ -72,7 +76,6 @@ def write_item(rec, seen, counter):
     if not link or link in seen:
         return counter
     slug = slugify(link, rec.get("title", ""))
-    # 防止 slug 冲突
     base = slug
     n = 1
     while (CONTENT / f"{slug}.json").exists():
@@ -141,52 +144,9 @@ def collect_ragezone(src, cfg, seen, counter):
             "category": src.get("category", "release"),
             "excerpt": strip_tags(body)[:240],
             "body_html": body,
+            "needs_translation": True,
         }
         counter = write_item(rec, seen, counter)
-    return counter
-
-
-def collect_ruiwoo(src, cfg, seen, counter):
-    # 尽力采集：ruiwoo 新闻接口对服务端请求目前稳定返回 500，失败即跳过，不阻断整体流程。
-    try:
-        params = urllib.parse.urlencode({"page": 1, "pageSize": 20, "id": 99}).encode()
-        data = fetch(
-            src["url"],
-            data=params,
-            headers={
-                "Referer": "https://ff.ruiwoo.cn/news-list.html",
-                "X-Requested-With": "XMLHttpRequest",
-                "Content-Type": "application/x-www-form-urlencoded",
-            },
-        )
-        obj = json.loads(data)
-        items = obj.get("data") or obj.get("list") or obj.get("rows") or []
-        for it in items:
-            link = it.get("url") or it.get("link") or ""
-            title = it.get("title", "")
-            if not link:
-                continue
-            rec = {
-                "title": title,
-                "url": link,
-                "date": it.get("date")
-                or it.get("createTime")
-                or it.get("publishTime")
-                or datetime.now().strftime("%Y-%m-%d"),
-                "source": src["name"],
-                "author": it.get("author", ""),
-                "comments": int(it.get("comments") or 0),
-                "category": src.get("category", "news"),
-                "excerpt": strip_tags(it.get("summary") or it.get("content") or ""),
-                "body_html": it.get("content") or it.get("html") or "",
-            }
-            counter = write_item(rec, seen, counter)
-    except Exception as e:
-        print(
-            "[WARN] ruiwoo API 暂不可用（多为服务端 500 拦截），已跳过；"
-            "如需稳定采集 ruiwoo 可后续加无头渲染步骤：",
-            e,
-        )
     return counter
 
 
@@ -194,13 +154,10 @@ def main():
     cfg = load_config()
     seen = load_seen()
     counter = 0
-    print("开始采集 ...")
+    print("开始采集（仅 RageZone）...")
     for src in cfg.get("sources", []):
-        t = src.get("type")
-        if t == "rss":
+        if src.get("type") == "rss":
             counter = collect_ragezone(src, cfg, seen, counter)
-        elif t == "ruiwoo_api":
-            counter = collect_ruiwoo(src, cfg, seen, counter)
     save_seen(seen)
     print(f"采集完成：本次新增 {counter} 条，累计已知 {len(seen)} 条。")
 

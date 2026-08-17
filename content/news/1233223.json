@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "Here is the updated version of Ketchups custom v18 files.  Enjoy \n\nIf you need help, Try following this setup guide! -&gt;Click Here&lt;-\n\n**Copied from Original post**\n\nWhat&#039;s included?\n\nSource is fully updated to VS26...\n\nRead more",
   "body_html": "<div class=\"bbWrapper\">Here is the updated version of Ketchups custom v18 files.  Enjoy <img src=\"https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f642.png\" class=\"smilie smilie--emoji\" loading=\"lazy\" width=\"64\" height=\"64\" alt=\":)\" title=\"Smile    :)\"  data-smilie=\"1\"data-shortname=\":)\" /><br />\n<br />\nIf you need help, Try following this setup guide! -&gt;<a href=\"https://forum.ragezone.com/threads/setup-guide-for-clean-files.1237948/\" class=\"link link--internal\">Click Here</a>&lt;-<br />\n<br />\n<b>**Copied from Original post**<br />\n<br />\n<span style=\"color: rgb(41, 105, 176)\">What&#039;s included?</span></b><br />\n<ul>\n<li data-xf-list-type=\"ul\">Source is fully updated to VS26...</li>\n</ul><br />\n<a href=\"https://forum.ragezone.com/threads/vs26-flyff-v18-custom.1233223/\" class=\"link link--internal\">Read more</a></div>",
-  "slug": "1233223"
+  "needs_translation": false,
+  "slug": "1233223",
+  "title_zh": "【VS2026】FlyFF v18 自定义版",
+  "excerpt_zh": "Ketchup 自定义 v18 文件的更新版，源码升级至 VS2026，由 Poreotix 发布。",
+  "summary_zh": "Poreotix 放出了 Ketchup 自定义 v18 文件的更新版本，源码已全面升级到 Visual Studio 2026。帖子注明内容复制自原帖，并附带一套安装配置指南供新手参考。"
 }

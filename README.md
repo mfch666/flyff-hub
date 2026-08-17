@@ -1,29 +1,33 @@
-# Flyff 知识站（AI 低频自动运营）
+# Flyff 知识站（AI 低频自动运营 · 中文整理）
 
-纯静态站点 + Python 采集/构建脚本。内容来自：
-- **RageZone FlyFF Releases**（RSS，稳定主线，含技术发布与热门讨论，带评论数可标「热门」）
-- **ruiwoo 新闻**（API 尽力采集；当前接口对服务端请求返回 500，会自动跳过，不阻断流程）
+纯静态站点 + Python 采集/构建脚本。内容**仅**来自：
+- **RageZone FlyFF Releases**（RSS，稳定主线，含技术发布、私服源码、热门讨论，带评论数可标「热门」）
+
+英文原文由 AI 用**准确中文**重写标题与摘要后发布，详情页顶部为中文描述，下方折叠「原文（English）」保留原始出处。
 
 ## 目录结构
 ```
 flyff-hub/
-├── config.json          # 站点信息、采集源、热门阈值
+├── config.json          # 站点信息、采集源（仅 RageZone）、热门阈值
 ├── collect.py           # 采集器：写 content/news/*.json + state/seen.json（去重）
-├── build.py             # 静态站生成器：读 JSON → public/*.html
+├── translate_seed.py    # 一次性脚本：把已采集英文原文批量注入中文翻译
+├── build.py             # 静态站生成器：读 JSON → public/*.html（中文为主）
 ├── content/
-│   ├── news/            # 采集结果（自动）
-│   └── knowledge/       # 知识库种子（手动维护，可加 Markdown/JSON）
+│   ├── news/            # 采集结果（自动；含 title_zh / excerpt_zh / summary_zh）
+│   └── knowledge/       # 知识库种子（手动维护 JSON）
 ├── state/seen.json      # 去重索引
 └── public/              # 构建产物（部署目录）
 ```
 
 ## 本地运行
 ```bash
-python collect.py     # 采集最新内容
+python collect.py     # 采集 RageZone 最新 RSS（新条目标记 needs_translation=true）
 python build.py       # 生成 public/
 # 预览：用任意静态服务器打开 public/，例如：
 python -m http.server 8080 --directory public
 ```
+> 新采集的条目需先有中文（title_zh / excerpt_zh / summary_zh）才会以中文展示。
+> 历史 20 条已用 `translate_seed.py` 注入；后续每周新增条目由自动化里的 agent 翻译。
 
 ## 部署到 EdgeOne Makers（静态，免费）
 1. 在 GitHub / GitLab 新建仓库，把本目录（含 public/）推上去：
@@ -42,12 +46,10 @@ python -m http.server 8080 --directory public
 
 ## 让 AI 全权运营（周级自动化）
 用 WorkBuddy 的「自动化」建一个**每周**任务，prompt 大致为：
-> 进入 flyff-hub 目录，运行 `python collect.py` 采集最新 RageZone/ruiwoo 内容，再运行 `python build.py` 重建 public/，然后 `git add -A && git commit -m "auto update" && git push` 触发 EdgeOne 重新部署。若采集或构建失败，在结果里说明原因，不要静默。
+> 进入 flyff-hub 目录，运行 `python collect.py` 采集 RageZone 最新 RSS；遍历 content/news 下所有 *.json，把 needs_translation=true 的新条目用准确中文重写（title_zh 标题、excerpt_zh 摘要、summary_zh 描述，保留版本号/引擎名/文件名），写回并把 needs_translation 设为 false；再运行 `python build.py` 重建 public/；最后 `git add -A && git commit -m "auto update" && git push` 触发 EdgeOne 重新部署。任一步失败需在结果里说明原因，不要静默。
 
 （git push 需要你事先在仓库 remote 里配置好带权限的凭据/Token。）
-不想配推送时：自动化只负责采集+构建更新本地文件，你在 Makers 控制台点「重新部署」即可刷新。
 
 ## 频率与扩展
-- 采集频率在 WorkBuddy 自动化里调（RRULE：每周 / 每 3 天均可）。当前默认低频。
-- 想加 ruiwoo 稳定采集：可后续给 collect.py 增加无头渲染（Playwright）步骤解析其 JS 新闻列表。
+- 采集频率在自动化里调（RRULE：每周 / 每 3 天均可）。当前默认低频。
 - 想做站内搜索 / 评论 / 动态 API：Makers 支持 Edge Functions / Cloud Functions，可在同项目扩展。

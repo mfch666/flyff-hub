@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "Hi, I just want to share the upgraded florist flyff, using chat got and copilot in vs2022 I was able to manage making a simple module out of it. Here is the link...\n\nRead more",
   "body_html": "<div class=\"bbWrapper\">Hi, I just want to share the upgraded florist flyff, using chat got and copilot in vs2022 I was able to manage making a simple module out of it. Here is the link...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/upgraded-florist-flyff.1254580/\" class=\"link link--internal\">Read more</a></div>",
-  "slug": "1254580"
+  "needs_translation": false,
+  "slug": "1254580",
+  "title_zh": "升级版 Florist FlyFF",
+  "excerpt_zh": "DevtopZ 借助 VS2022 中的 ChatGPT 与 Copilot 将 Florist FlyFF 改造成一个简单模块并分享。",
+  "summary_zh": "DevtopZ 分享其升级版 Florist FlyFF，作者借助 Visual Studio 2022 中的 ChatGPT 与 Copilot，将功能封装成一个简单模块。帖子附有相关链接供取用。"
 }

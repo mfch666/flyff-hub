@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "i release the mini source change for random weather.\nfall snow slow, fall snow fast and rain.\nThis code make random a weather all 2-5 min you can change this\nhave fun.\n\n#define __RANDOM_WEATHER                            // Added Random Wea",
   "body_html": "<div class=\"bbWrapper\">i release the mini source change for random weather.<br />\nfall snow slow, fall snow fast and rain.<br />\nThis code make random a weather all 2-5 min you can change this<br />\nhave fun.<br />\n<br />\n#define __RANDOM_WEATHER                            // Added Random Weather...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/mini-release-random-weather.1260214/\" class=\"link link--internal\">Read more</a></div>",
-  "slug": "1260214"
+  "needs_translation": false,
+  "slug": "1260214",
+  "title_zh": "小功能发布：随机天气",
+  "excerpt_zh": "Soturi1991 放出随机天气的源码改动，支持落叶慢/快与下雨，每 2–5 分钟随机切换。",
+  "summary_zh": "Soturi1991 分享了一个轻量级的随机天气源码改动：包含落叶（慢/快）与下雨效果，每 2–5 分钟随机切换一次（间隔可自定义）。通过新增宏 __RANDOM_WEATHER 启用。"
 }

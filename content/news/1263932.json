@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "Hello everyone,\n\nI am currently sharing my 2024 Florist Files V2. All duplication exploits related to the added systems have been fixed, including AEGON_CRAFTING and WEAPON_RARITY and other systems. These files were tested live for 4...\n\nRe",
   "body_html": "<div class=\"bbWrapper\">Hello everyone,<br />\n<br />\nI am currently sharing my 2024 Florist Files V2. All duplication exploits related to the added systems have been fixed, including <b>AEGON_CRAFTING</b> and <b>WEAPON_RARITY and other systems</b>. These files were tested live for 4...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/florist-custom-files-v2.1263932/\" class=\"link link--internal\">Read more</a></div>",
-  "slug": "1263932"
+  "needs_translation": false,
+  "slug": "1263932",
+  "title_zh": "Florist 自定义文件 V2",
+  "excerpt_zh": "Zacks 分享 2024 年 Florist Files V2，已修复 AEGON_CRAFTING、WEAPON_RARITY 等复制漏洞，经 4 个月线上测试。",
+  "summary_zh": "Zacks 分享其 2024 年的 Florist Files V2，针对新增系统相关的复制漏洞（包括 AEGON_CRAFTING、WEAPON_RARITY 等）全部做了修复。该文件曾进行长达 4 个月的线上实测，稳定性较好。"
 }

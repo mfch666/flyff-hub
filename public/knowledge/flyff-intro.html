@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>什么是 Flyff / Flyff Universe · Flyff 知识站</title>
-<meta name="description" content="Flyff 新闻 · 技术发布 · 热门话题聚合">
+<meta name="description" content="Flyff 技术发布 · 私服源码 · 热门话题聚合（中文整理）">
 <style>
 :root{--bg:#f7f8fa;--card:#fff;--text:#1f2430;--muted:#6b7280;--line:#e5e7eb;--accent:#3b6d11;--hot:#c0392b}
 *{box-sizing:border-box}
@@ -26,6 +26,7 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .card h2 a{color:var(--text);text-decoration:none}
 .card h2 a:hover{color:var(--accent)}
 .meta{font-size:12px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.orig{font-size:12px;color:#9aa3ad;margin:4px 0 0;font-style:italic}
 .excerpt{color:#374151;font-size:14px;margin:8px 0}
 .foot{font-size:13px;margin-top:6px;display:flex;gap:14px;align-items:center}
 .ext{color:var(--accent);text-decoration:none}
@@ -39,6 +40,13 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .article-body{font-size:15px}
 .article-body img{max-width:100%}
 .article-body a{color:var(--accent)}
+.article .lead{font-size:15px;color:#1f2430;background:#f3f6ee;border-left:3px solid var(--accent);padding:12px 14px;border-radius:8px;margin:14px 0}
+.orig-wrap{margin:18px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.orig-wrap summary{cursor:pointer;padding:10px 14px;background:#fafbfc;font-size:13px;color:var(--muted);user-select:none}
+.orig-wrap summary:hover{color:var(--accent)}
+.orig-wrap .orig-title{font-size:13px;color:#9aa3ad;font-style:italic;margin:0 0 8px}
+.orig-body{padding:0 14px 14px;color:#4b5563;font-size:13px}
+.orig-body img{max-width:100%}
 .site-foot{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:20px 0;text-align:center}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
@@ -46,7 +54,7 @@ a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decorati
 </head>
 <body>
 <header class="site-head"><div class="wrap"><a class="brand" href="index.html">Flyff 知识站</a><nav><a href="index.html">首页</a><a href="news/index.html">新闻/发布</a><a href="knowledge/index.html" class="active">知识库</a></nav></div></header>
-<main class="wrap"><a class="back" href="knowledge/index.html">← 返回知识库</a><article class="article"><h1>什么是 Flyff / Flyff Universe</h1><div class="meta"><span class="date"></span><span class="src"></span></div><div class="article-body"><p><b>Flyff</b>（Fly for Fun）是一款以「飞行」为核心特色的卡通风格 MMORPG，最早由韩国 Aeonsoft / Gala Lab 研发。玩家通过升级获得飞行道具（如滑板、翅膀），在奇幻的瑞加大陆（Madrigal）自由飞行冒险。</p><p><b>Flyff Universe</b> 是官方推出的跨平台重制版本，最大特点是<b>浏览器即玩、三端互通</b>（PC / 移动 / 网页），并对画面与操作做了现代化重制。当前官方主阵地为 <a href='https://universe.flyff.com' target='_blank' rel='noopener'>universe.flyff.com</a>。</p><p>除了官方服，社区中还存在大量私服（如 ruiwoo 等网页飞飞），它们通常会自行更新新闻与活动。本站的「新闻/发布」板块会聚合 RageZone 等社区的技术发布与热门讨论。</p></div><p class="foot"><a class="ext" href="" target="_blank" rel="noopener">查看原文 ↗</a></p></article></main>
-<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone / ruiwoo，版权归原作者所有</div></footer>
+<main class="wrap"><a class="back" href="knowledge/index.html">← 返回知识库</a><article class="article"><h1>什么是 Flyff / Flyff Universe</h1><div class="meta"><span class="date"></span><span class="src"></span><span class="author"></span></div><div class="article-body"><p><b>Flyff</b>（Fly for Fun）是一款以「飞行」为核心特色的卡通风格 MMORPG，最早由韩国 Aeonsoft / Gala Lab 研发。玩家通过升级获得飞行道具（如滑板、翅膀），在奇幻的瑞加大陆（Madrigal）自由飞行冒险。</p><p><b>Flyff Universe</b> 是官方推出的跨平台重制版本，最大特点是<b>浏览器即玩、三端互通</b>（PC / 移动 / 网页），并对画面与操作做了现代化重制。当前官方主阵地为 <a href='https://universe.flyff.com' target='_blank' rel='noopener'>universe.flyff.com</a>。</p><p>除了官方服，社区中还存在大量私服（如 ruiwoo 等网页飞飞），它们通常会自行更新新闻与活动。本站的「新闻/发布」板块会聚合 RageZone 等社区的技术发布与热门讨论。</p></div><p class="foot"><a class="ext" href="" target="_blank" rel="noopener">查看原文 ↗</a></p></article></main>
+<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有</div></footer>
 </body>
 </html>

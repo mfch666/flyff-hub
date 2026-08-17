@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>首页 · Flyff 知识站</title>
-<meta name="description" content="Flyff 新闻 · 技术发布 · 热门话题聚合">
+<meta name="description" content="Flyff 技术发布 · 私服源码 · 热门话题聚合（中文整理）">
 <style>
 :root{--bg:#f7f8fa;--card:#fff;--text:#1f2430;--muted:#6b7280;--line:#e5e7eb;--accent:#3b6d11;--hot:#c0392b}
 *{box-sizing:border-box}
@@ -26,6 +26,7 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .card h2 a{color:var(--text);text-decoration:none}
 .card h2 a:hover{color:var(--accent)}
 .meta{font-size:12px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.orig{font-size:12px;color:#9aa3ad;margin:4px 0 0;font-style:italic}
 .excerpt{color:#374151;font-size:14px;margin:8px 0}
 .foot{font-size:13px;margin-top:6px;display:flex;gap:14px;align-items:center}
 .ext{color:var(--accent);text-decoration:none}
@@ -39,6 +40,13 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .article-body{font-size:15px}
 .article-body img{max-width:100%}
 .article-body a{color:var(--accent)}
+.article .lead{font-size:15px;color:#1f2430;background:#f3f6ee;border-left:3px solid var(--accent);padding:12px 14px;border-radius:8px;margin:14px 0}
+.orig-wrap{margin:18px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.orig-wrap summary{cursor:pointer;padding:10px 14px;background:#fafbfc;font-size:13px;color:var(--muted);user-select:none}
+.orig-wrap summary:hover{color:var(--accent)}
+.orig-wrap .orig-title{font-size:13px;color:#9aa3ad;font-style:italic;margin:0 0 8px}
+.orig-body{padding:0 14px 14px;color:#4b5563;font-size:13px}
+.orig-body img{max-width:100%}
 .site-foot{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:20px 0;text-align:center}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
@@ -46,109 +54,53 @@ a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decorati
 </head>
 <body>
 <header class="site-head"><div class="wrap"><a class="brand" href="index.html">Flyff 知识站</a><nav><a href="index.html" class="active">首页</a><a href="news/index.html">新闻/发布</a><a href="knowledge/index.html">知识库</a></nav></div></header>
-<main class="wrap"><section class="hero"><h1>Flyff 知识站</h1><p>Flyff 新闻 · 技术发布 · 热门话题聚合</p></section><h3 class="section-title">最新发布 / 新闻</h3><article class="card">
+<main class="wrap"><section class="hero"><h1>Flyff 知识站</h1><p>Flyff 技术发布 · 私服源码 · 热门话题聚合（中文整理）</p></section><h3 class="section-title">最新发布 / 新闻</h3><article class="card">
   <div class="meta"><span class="date">2026-08-17</span><span class="src">RageZone FlyFF Releases</span><span class="badge hot">热门 · 39 评论</span></div>
-  <h2><a href="news/1269016.html">[RELEASE] Latest version of Reborn MMO</a></h2>
-  <p class="excerpt">Reborn-MMO – Final Public Release&amp;#8203;Hello everyone,
-
-Today, I am releasing a version of the Reborn-MMO files dating from approximately four months ago. This version works correctly and includes, among other things:
-
-
-The...
-
-Read more</p>
+  <h2><a href="news/1269016.html">Reborn MMO 最终公开版发布</a></h2>
+  <div class="orig">原文：[RELEASE] Latest version of Reborn MMO</div>
+  <p class="excerpt">作者 Zacks 放出约四个月前版本的 Reborn-MMO 服务端文件，已验证可正常运行，包含多项系统。</p>
   <div class="foot"><a class="ext" href="https://forum.ragezone.com/threads/release-latest-version-of-reborn-mmo.1269016/" target="_blank" rel="noopener">查看原文 ↗</a><span class="comments">39 评论</span></div>
 </article><article class="card">
   <div class="meta"><span class="date">2026-08-16</span><span class="src">RageZone FlyFF Releases</span><span class="badge hot">热门 · 287 评论</span></div>
-  <h2><a href="news/1235278.html">[VS22] FlyFF v21</a></h2>
-  <p class="excerpt">Paywalled and Hidden on another forum, Now they are here and FREE for everyone!
-
-Tested On:
-
-Visual Studio Community 2022
-Sql Server 2019 Standard
-Windows 10 &amp;amp; 11 Professional
-How to install:
-
-...
-
-Read more</p>
+  <h2><a href="news/1235278.html">【VS2022】FlyFF v21 源码（免费公开）</a></h2>
+  <div class="orig">原文：[VS22] FlyFF v21</div>
+  <p class="excerpt">此前在其它论坛付费隐藏的 FlyFF v21 源码现已免费公开，支持 Visual Studio 2022 / SQL Server 2019 / Win10-11。</p>
   <div class="foot"><a class="ext" href="https://forum.ragezone.com/threads/vs22-flyff-v21.1235278/" target="_blank" rel="noopener">查看原文 ↗</a><span class="comments">287 评论</span></div>
 </article><article class="card">
   <div class="meta"><span class="date">2026-08-15</span><span class="src">RageZone FlyFF Releases</span><span class="badge hot">热门 · 63 评论</span></div>
-  <h2><a href="news/950576.html">Atlas Beast Repack</a></h2>
-  <p class="excerpt">&amp;#8203; This release includes about half of the world models from World of Warcraft, including the expansions TBC, WotLK &amp;amp; Cata. It is also more compact...
-
-Read more</p>
+  <h2><a href="news/950576.html">Atlas Beast 整合包（Repack）</a></h2>
+  <div class="orig">原文：Atlas Beast Repack</div>
+  <p class="excerpt">包含约半数的魔兽世界（含 TBC/WotLK/Cata）世界模型，体积更精简，由 Adler 发布。</p>
   <div class="foot"><a class="ext" href="https://forum.ragezone.com/threads/atlas-beast-repack.950576/" target="_blank" rel="noopener">查看原文 ↗</a><span class="comments">63 评论</span></div>
 </article><article class="card">
-  <div class="meta"><span class="date">2026-08-13</span><span class="src">RageZone FlyFF Releases</span><span class="badge hot">热门 · 20 评论</span></div>
-  <h2><a href="news/1211433.html">[Florist files] Full pack.</a></h2>
-  <p class="excerpt">Files florist Re Release.
-
-link : 
-
- 
-
-
-
-	
-		To view the content, you need to sign In or register.
-	
-
-
-
-ServerCommon.h
-
-Link : 
-
-
-Password : RageZone</p>
+  <div class="meta"><span class="date">2026-08-13</span><span class="src">RageZone FlyFF Releases</span></div>
+  <h2><a href="news/1211433.html">【Florist 文件】完整整合包</a></h2>
+  <div class="orig">原文：[Florist files] Full pack.</div>
+  <p class="excerpt">Zacks 重新发布 Florist 全套文件，含 ServerCommon.h，部分链接需登录或密码查看。</p>
   <div class="foot"><a class="ext" href="https://forum.ragezone.com/threads/florist-files-full-pack.1211433/" target="_blank" rel="noopener">查看原文 ↗</a><span class="comments">20 评论</span></div>
 </article><article class="card">
   <div class="meta"><span class="date">2026-08-12</span><span class="src">RageZone FlyFF Releases</span><span class="badge hot">热门 · 44 评论</span></div>
-  <h2><a href="news/1265455.html">Website Node.Js V2</a></h2>
-  <p class="excerpt">Hello everyone
-
-Website update completed - Full website rework and PayPal Ranking system integration
-
-The website has been heavily improved and stabilized with multiple fixes and new systems.
-
-Website / Infrastructure:
-• Fixed PM2 startup..</p>
+  <h2><a href="news/1265455.html">官网 Node.js 重构版 V2</a></h2>
+  <div class="orig">原文：Website Node.Js V2</div>
+  <p class="excerpt">官网完成整体重构并集成 PayPal 排行榜系统，修复多项问题、增强稳定性，由 Zacks 发布。</p>
   <div class="foot"><a class="ext" href="https://forum.ragezone.com/threads/website-node-js-v2.1265455/" target="_blank" rel="noopener">查看原文 ↗</a><span class="comments">44 评论</span></div>
 </article><article class="card">
-  <div class="meta"><span class="date">2026-08-10</span><span class="src">RageZone FlyFF Releases</span><span class="badge hot">热门 · 14 评论</span></div>
-  <h2><a href="news/1207559.html">[Release] BBeast &amp; Maps</a></h2>
-  <p class="excerpt">This is an advert...</p>
+  <div class="meta"><span class="date">2026-08-10</span><span class="src">RageZone FlyFF Releases</span></div>
+  <h2><a href="news/1207559.html">【发布】BBeast 与地图资源</a></h2>
+  <div class="orig">原文：[Release] BBeast &amp; Maps</div>
+  <p class="excerpt">Iapin 发布的 BBeast 与地图相关资源（公告性质）。</p>
   <div class="foot"><a class="ext" href="https://forum.ragezone.com/threads/release-bbeast-maps.1207559/" target="_blank" rel="noopener">查看原文 ↗</a><span class="comments">14 评论</span></div>
 </article><article class="card">
   <div class="meta"><span class="date">2026-08-10</span><span class="src">RageZone FlyFF Releases</span><span class="badge hot">热门 · 200 评论</span></div>
-  <h2><a href="news/1233232.html">[VS22] Caleb FlyFF</a></h2>
-  <p class="excerpt">These are based on florist older leaked files.  I take no credit.
-
-Tested On:
-
-Visual Studio Community 2022
-Sql Server 2019 Standard
-Windows 10 &amp;amp; 11 Professional
-Screenshot:
-
-
-...
-
-Read more</p>
+  <h2><a href="news/1233232.html">【VS2022】Caleb FlyFF 源码</a></h2>
+  <div class="orig">原文：[VS22] Caleb FlyFF</div>
+  <p class="excerpt">基于较早泄露的 Florist 文件构建，支持 VS2022 / SQL2019 / Win10-11，作者 Poreotix。</p>
   <div class="foot"><a class="ext" href="https://forum.ragezone.com/threads/vs22-caleb-flyff.1233232/" target="_blank" rel="noopener">查看原文 ↗</a><span class="comments">200 评论</span></div>
 </article><article class="card">
   <div class="meta"><span class="date">2026-08-08</span><span class="src">RageZone FlyFF Releases</span></div>
-  <h2><a href="news/1260864.html">FlyFF v21 – Native x64 Migration</a></h2>
-  <p class="excerpt">FlyFF v21 – Native x64 Migration (DEVELOPMENT ONLY)&amp;#8203;Hello,
-
-I’m sharing my project: a full native x64 migration of the FlyFF v21 source code.
-
-This work is based on the original source...
-
-Read more</p>
+  <h2><a href="news/1260864.html">FlyFF v21 原生 x64 移植（仅开发版）</a></h2>
+  <div class="orig">原文：FlyFF v21 – Native x64 Migration</div>
+  <p class="excerpt">Bodyroro 分享将 FlyFF v21 源码完整迁移到原生 64 位的开发项目，目前仅限开发用途。</p>
   <div class="foot"><a class="ext" href="https://forum.ragezone.com/threads/flyff-v21-%E2%80%93-native-x64-migration.1260864/" target="_blank" rel="noopener">查看原文 ↗</a><span class="comments">5 评论</span></div>
 </article><p class="foot"><a class="ext" href="news/index.html">查看全部新闻/发布 →</a></p><h3 class="section-title">知识库</h3><article class="card">
   <div class="meta"><span class="src">职业</span></div>
@@ -163,6 +115,6 @@ Read more</p>
   <h2><a href="knowledge/leveling.html">新手升级路线速览</a></h2>
   <p class="excerpt">从初心者到 Flyff Universe 的 1.5 版本，给出一条稳妥的练级与资源积累路线。</p>
 </article></main>
-<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone / ruiwoo，版权归原作者所有</div></footer>
+<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有</div></footer>
 </body>
 </html>

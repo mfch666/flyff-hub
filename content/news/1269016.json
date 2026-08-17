@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "Reborn-MMO – Final Public Release&#8203;Hello everyone,\n\nToday, I am releasing a version of the Reborn-MMO files dating from approximately four months ago. This version works correctly and includes, among other things:\n\n\nThe...\n\nRead more",
   "body_html": "<div class=\"bbWrapper\"><h3 class=\"bbHeading\"><a class=\"u-anchorTarget\" name=\"-reborn-mmo-%E2%80%93-final-public-release\"></a><b>Reborn-MMO – Final Public Release</b>&#8203;<a class=\"hoverLink\" href=\"#-reborn-mmo-%E2%80%93-final-public-release\" title=\"Permanent link\"></a></h3>Hello everyone,<br />\n<br />\nToday, I am releasing a version of the <b>Reborn-MMO files dating from approximately four months ago</b>. This version works correctly and includes, among other things:<br />\n<br />\n<ul>\n<li data-xf-list-type=\"ul\">The...</li>\n</ul><br />\n<a href=\"https://forum.ragezone.com/threads/release-latest-version-of-reborn-mmo.1269016/\" class=\"link link--internal\">Read more</a></div>",
-  "slug": "1269016"
+  "needs_translation": false,
+  "slug": "1269016",
+  "title_zh": "Reborn MMO 最终公开版发布",
+  "excerpt_zh": "作者 Zacks 放出约四个月前版本的 Reborn-MMO 服务端文件，已验证可正常运行，包含多项系统。",
+  "summary_zh": "这是 Zacks 发布的 Reborn-MMO 最终公开版本，文件源自约四个月前的版本，经测试可正确运行。该版本包含了世界模型、任务与多项系统改进，适合想搭建 Reborn 系私服的开发者使用。"
 }

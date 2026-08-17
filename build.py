@@ -70,6 +70,7 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .card h2 a{color:var(--text);text-decoration:none}
 .card h2 a:hover{color:var(--accent)}
 .meta{font-size:12px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.orig{font-size:12px;color:#9aa3ad;margin:4px 0 0;font-style:italic}
 .excerpt{color:#374151;font-size:14px;margin:8px 0}
 .foot{font-size:13px;margin-top:6px;display:flex;gap:14px;align-items:center}
 .ext{color:var(--accent);text-decoration:none}
@@ -83,6 +84,13 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .article-body{font-size:15px}
 .article-body img{max-width:100%}
 .article-body a{color:var(--accent)}
+.article .lead{font-size:15px;color:#1f2430;background:#f3f6ee;border-left:3px solid var(--accent);padding:12px 14px;border-radius:8px;margin:14px 0}
+.orig-wrap{margin:18px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.orig-wrap summary{cursor:pointer;padding:10px 14px;background:#fafbfc;font-size:13px;color:var(--muted);user-select:none}
+.orig-wrap summary:hover{color:var(--accent)}
+.orig-wrap .orig-title{font-size:13px;color:#9aa3ad;font-style:italic;margin:0 0 8px}
+.orig-body{padding:0 14px 14px;color:#4b5563;font-size:13px}
+.orig-body img{max-width:100%}
 .site-foot{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:20px 0;text-align:center}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
@@ -100,7 +108,7 @@ BASE = """<!DOCTYPE html>
 <body>
 {{head}}
 <main class="wrap">{{content}}</main>
-<footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone / ruiwoo，版权归原作者所有</div></footer>
+<footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有</div></footer>
 </body>
 </html>"""
 
@@ -132,15 +140,20 @@ def render_page(cfg, page_title, content, nav_active=""):
 
 def news_card(it, cfg):
     hot = ""
-    if int(it.get("comments") or 0) >= cfg.get("hot_threshold", 10):
+    if int(it.get("comments") or 0) >= cfg.get("hot_threshold", 30):
         hot = f'<span class="badge hot">热门 · {it["comments"]} 评论</span>'
     comments = ""
     if it.get("comments"):
         comments = f'<span class="comments">{it["comments"]} 评论</span>'
+    title = it.get("title_zh") or it.get("title", "")
+    excerpt = it.get("excerpt_zh") or it.get("excerpt", "")
+    orig = it.get("title", "") if it.get("title_zh") else ""
+    orig_line = f'<div class="orig">原文：{esc(orig)}</div>' if orig else ""
     return f'''<article class="card">
   <div class="meta"><span class="date">{esc(it.get("date",""))}</span><span class="src">{esc(it.get("source",""))}</span>{hot}</div>
-  <h2><a href="news/{esc(it.get("slug",""))}.html">{esc(it.get("title",""))}</a></h2>
-  <p class="excerpt">{esc(it.get("excerpt",""))}</p>
+  <h2><a href="news/{esc(it.get("slug",""))}.html">{esc(title)}</a></h2>
+  {orig_line}
+  <p class="excerpt">{esc(excerpt)}</p>
   <div class="foot"><a class="ext" href="{esc(it.get("url",""))}" target="_blank" rel="noopener">查看原文 ↗</a>{comments}</div>
 </article>'''
 
@@ -154,22 +167,43 @@ def know_card(it):
 
 
 def article_page(cfg, it, kind):
-    body = it.get("body_html") or it.get("body") or "<p>（暂无正文）</p>"
+    body = it.get("body_html") or it.get("body") or ""
     meta = (
         f'<div class="meta"><span class="date">{esc(it.get("date",""))}</span>'
-        f'<span class="src">{esc(it.get("source",""))}</span></div>'
+        f'<span class="src">{esc(it.get("source",""))}</span>'
+        f'<span class="author">{esc(it.get("author",""))}</span></div>'
     )
     back = "news/index.html" if kind == "news" else "knowledge/index.html"
     label = "新闻/发布" if kind == "news" else "知识库"
+    if kind == "news":
+        title = it.get("title_zh") or it.get("title", "")
+        lead = it.get("summary_zh") or it.get("excerpt_zh") or ""
+        orig_title = it.get("title", "") if it.get("title_zh") else ""
+        orig_block = ""
+        if orig_title or body:
+            inner = ""
+            if orig_title:
+                inner += f'<p class="orig-title">原标题：{esc(orig_title)}</p>'
+            if body:
+                inner += f'<div class="article-body orig-body">{body}</div>'
+            orig_block = (
+                '<details class="orig-wrap"><summary>原文（English）</summary>'
+                f"{inner}</details>"
+            )
+        lead_html = f'<p class="lead">{esc(lead)}</p>' if lead else ""
+        body_html = lead_html + orig_block
+    else:
+        title = it.get("title", "")
+        body_html = f'<div class="article-body">{body}</div>' if body else "<p>（暂无正文）</p>"
     content = (
         f'<a class="back" href="{back}">← 返回{label}</a>'
         '<article class="article">'
-        f"<h1>{esc(it.get('title',''))}</h1>{meta}"
-        f'<div class="article-body">{body}</div>'
+        f"<h1>{esc(title)}</h1>{meta}"
+        f"{body_html}"
         f'<p class="foot"><a class="ext" href="{esc(it.get("url",""))}" target="_blank" rel="noopener">查看原文 ↗</a></p>'
         "</article>"
     )
-    return render_page(cfg, it.get("title", ""), content, "news" if kind == "news" else "know")
+    return render_page(cfg, title, content, "news" if kind == "news" else "know")
 
 
 def build():

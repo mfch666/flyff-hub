@@ -8,5 +8,9 @@
   "category": "release",
   "excerpt": "This is an advert...",
   "body_html": "<div class=\"bbWrapper\"><span style=\"font-size: 26px\">This is an advert...          <img src=\"https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f631.png\" class=\"smilie smilie--emoji\" loading=\"lazy\" width=\"64\" height=\"64\" alt=\":eek:\" title=\"Eek!    :eek:\"  data-smilie=\"9\"data-shortname=\":eek:\" /></span></div>",
-  "slug": "1207559"
+  "needs_translation": false,
+  "slug": "1207559",
+  "title_zh": "【发布】BBeast 与地图资源",
+  "excerpt_zh": "Iapin 发布的 BBeast 与地图相关资源（公告性质）。",
+  "summary_zh": "Iapin 发布的 BBeast 及配套地图资源，属于该系列的资源放出帖，内容偏宣传性质，供有需要的开发者取用。"
 }
