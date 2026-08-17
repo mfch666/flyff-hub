@@ -1,0 +1,11 @@
+{
+  "slug": "fs9",
+  "tag": "求助中心",
+  "title": "飞飞清理邮件脚本",
+  "excerpt": "use&nbsp;CHARACTER_01_DBF truncate&nbsp;table&nbsp;[MAIL_TBL] 一键清理，清理之前考虑清楚，毕竟还有一些未被提取的邮件 当然还有安全清理的 use&nbsp;CHARACTER_0",
+  "body_html": "\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<pre class=\"brush:sql;toolbar:false\">use&nbsp;CHARACTER_01_DBF\r\ntruncate&nbsp;table&nbsp;[MAIL_TBL]</pre><p>一键清理，清理之前考虑清楚，毕竟还有一些未被提取的邮件</p><p>当然还有安全清理的</p><pre class=\"brush:sql;toolbar:false\">use&nbsp;CHARACTER_01_DBF\r\nDELETE&nbsp;MAIL_TBL&nbsp;where&nbsp;DeleteDt&nbsp;&lt;&nbsp;GETDATE()</pre><p>只清理被删除或者提取完的邮件</p>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t",
+  "date": "2022-3-3",
+  "source": "起航飞飞",
+  "author": "admin888",
+  "source_url": "https://www.flyffstart.com/thread-9.htm"
+}

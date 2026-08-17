@@ -1,0 +1,11 @@
+{
+  "slug": "fs10",
+  "tag": "求助中心",
+  "title": "飞飞关闭某个替身的离线商店",
+  "excerpt": "USE&nbsp;[CHARACTER_01_DBF] GO update&nbsp;VIRTUAL_VENDOR_TBL&nbsp;set&nbsp;m_nState=&#39;2&#39;,m_dtStop=&#39;2022-03-0",
+  "body_html": "\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<pre class=\"brush:sql;toolbar:false\">USE&nbsp;[CHARACTER_01_DBF]\r\nGO\r\nupdate&nbsp;VIRTUAL_VENDOR_TBL&nbsp;set&nbsp;m_nState=&#39;2&#39;,m_dtStop=&#39;2022-03-03&nbsp;10:00:00.000&#39;&nbsp;where&nbsp;m_idPlayer&nbsp;=&nbsp;&#39;角色ID&#39;</pre><p>执行些脚本 指定的 角色ID 离线商店将被关闭</p>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t",
+  "date": "2022-3-3",
+  "source": "起航飞飞",
+  "author": "admin888",
+  "source_url": "https://www.flyffstart.com/thread-10.htm"
+}

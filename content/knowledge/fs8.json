@@ -1,0 +1,11 @@
+{
+  "slug": "fs8",
+  "tag": "求助中心",
+  "title": "飞飞清理日志库脚本",
+  "excerpt": "use&nbsp;LOGGING_01_DBF GO truncate&nbsp;table&nbsp;[CHARACTER_TBL] truncate&nbsp;table&nbsp;[LOG_BILLING_ITEM_TBL] trun",
+  "body_html": "\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<pre class=\"brush:sql;toolbar:false\">use&nbsp;LOGGING_01_DBF\r\nGO\r\ntruncate&nbsp;table&nbsp;[CHARACTER_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_BILLING_ITEM_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_DEATH_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_GAMEMASTER_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_GUILD_BANK_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_GUILD_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_GUILD_SERVICE_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_ITEM_EVENT_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_ITEM_SEND_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_ITEM_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_LEVELUP_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_LOGIN_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_PK_PVP_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_UNIQUE_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_USER_CNT_TBL]\r\ntruncate&nbsp;table&nbsp;[Skill_LevelUp]\r\ntruncate&nbsp;table&nbsp;[tblChangeNameLog]\r\ntruncate&nbsp;table&nbsp;[tblLogExpBox]\r\ntruncate&nbsp;table&nbsp;[tblPetLog]\r\ntruncate&nbsp;table&nbsp;[tblQuestLog]\r\ntruncate&nbsp;table&nbsp;[tblSkillPointLog]\r\ntruncate&nbsp;table&nbsp;[tblTradeDetailLog]\r\ntruncate&nbsp;table&nbsp;[tblTradeItemLog]\r\ntruncate&nbsp;table&nbsp;[tblTradeLog]\r\ntruncate&nbsp;table&nbsp;[tblChangeNameHistoryLog]\r\ntruncate&nbsp;table&nbsp;[tblCampusLog]\r\ntruncate&nbsp;table&nbsp;[tblCampus_PointLog]\r\ntruncate&nbsp;table&nbsp;[LOG_INS_DUNGEON_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_HONOR_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_GUILD_WAR_TBL]\r\ntruncate&nbsp;table&nbsp;[LOG_GUILD_DISPERSION_TBL]</pre><p><br/></p>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t",
+  "date": "2022-3-3",
+  "source": "起航飞飞",
+  "author": "admin888",
+  "source_url": "https://www.flyffstart.com/thread-8.htm"
+}

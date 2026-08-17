@@ -1,0 +1,11 @@
+{
+  "slug": "fs4",
+  "tag": "站内大厅",
+  "title": "帐号生成脚本",
+  "excerpt": "DECLARE&nbsp;@RC&nbsp;int DECLARE&nbsp;@account&nbsp;varchar(32) DECLARE&nbsp;@pw&nbsp;varchar(32) DECLARE&nbsp;@safecod",
+  "body_html": "\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<pre class=\"brush:sql;toolbar:false\">DECLARE&nbsp;@RC&nbsp;int\r\nDECLARE&nbsp;@account&nbsp;varchar(32)\r\nDECLARE&nbsp;@pw&nbsp;varchar(32)\r\nDECLARE&nbsp;@safecode&nbsp;varchar(32)\r\nDECLARE&nbsp;@email&nbsp;varchar(100)\r\nDECLARE&nbsp;@ip&nbsp;varchar(16)\r\nset&nbsp;@account=&#39;flyffstart&#39;\r\nset&nbsp;@pw&nbsp;=&nbsp;&#39;29e6c635266da69546686b8b8b9a9df0&#39;\r\nset&nbsp;@safecode&nbsp;=&nbsp;&#39;b0f9861c6fea25559fe1e282e36a4ea6&#39;\r\nset&nbsp;@email&nbsp;=&nbsp;&#39;225314824@qq.com&#39;\r\nset&nbsp;@ip&nbsp;=&nbsp;&#39;127.0.0.1&#39;\r\n--&nbsp;TODO:&nbsp;在此处设置参数值。\r\nEXECUTE&nbsp;@RC&nbsp;=&nbsp;[ACCOUNT_DBF].[dbo].[usp_CreateNewAccount]&nbsp;\r\n&nbsp;&nbsp;&nbsp;@account\r\n&nbsp;&nbsp;,@pw\r\n&nbsp;&nbsp;,@safecode\r\n&nbsp;&nbsp;,@email\r\n&nbsp;&nbsp;,@ip\r\nGO</pre><p>在ssms里 新建查询&nbsp; 把代码贴进去，点执行 就可以生成一个帐号</p><p>帐号:flyffstart</p><p>密码:flyffstart</p><p>邮箱:225314824@qq.com</p><p>安全码:225314824</p><p>也可以直接下载附件 直接在ssms里运行</p><p><span style=\"color:#ff0000\"><strong>ssms</strong></span> =&nbsp;SQL Server Management Studio&nbsp; 即数据库管理工具</p>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<fieldset class=\"fieldset\">\r\n<legend>上传的附件：</legend>\r\n<ul class=\"attachlist\">\r\n<li aid=\"4\">\r\n\t\t<a href=\"https://www.flyffstart.com/attach-download-4.htm\" target=\"_blank\">\r\n\t\t\t<i class=\"icon filetype other\"></i>\r\n\t\t\taccount.sql\r\n\t\t</a>\r\n</li>\r\n</ul>\r\n</fieldset>\r\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t",
+  "date": "2022-1-21",
+  "source": "起航飞飞",
+  "author": "admin888",
+  "source_url": "https://www.flyffstart.com/thread-4.htm"
+}

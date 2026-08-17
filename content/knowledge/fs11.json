@@ -1,0 +1,11 @@
+{
+  "slug": "fs11",
+  "tag": "求助中心",
+  "title": "飞飞强改帐号脚本",
+  "excerpt": "SET&nbsp;NOCOUNT&nbsp;ON DECLARE&nbsp;@iaccount&nbsp;varchar(32); DECLARE&nbsp;@oaccount&nbsp;varchar(32); SET&nbsp;@iac",
+  "body_html": "\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<pre class=\"brush:sql;toolbar:false\">SET&nbsp;NOCOUNT&nbsp;ON\t\r\nDECLARE&nbsp;@iaccount&nbsp;varchar(32);\r\nDECLARE&nbsp;@oaccount&nbsp;varchar(32);\r\nSET&nbsp;@iaccount&nbsp;=&nbsp;&#39;新帐号&#39;;\r\nSET&nbsp;@oaccount&nbsp;=&nbsp;&#39;老帐号&#39;;\r\n&nbsp;&nbsp;\r\nupdate&nbsp;ACCOUNT_DBF.dbo.ACCOUNT_TBL&nbsp;set&nbsp;[account]&nbsp;=&nbsp;@iaccount&nbsp;where&nbsp;account&nbsp;=&nbsp;@oaccount\r\nupdate&nbsp;ACCOUNT_DBF.dbo.ACCOUNT_TBL_DETAIL&nbsp;set&nbsp;account&nbsp;=&nbsp;@iaccount&nbsp;where&nbsp;account&nbsp;=&nbsp;@oaccount\r\nupdate&nbsp;CHARACTER_01_DBF.dbo.CHARACTER_TBL&nbsp;set&nbsp;account&nbsp;=@iaccount&nbsp;where&nbsp;account&nbsp;=&nbsp;@oaccount</pre><p>在游戏里 一些玩家的用户帐号难免出现暴露[或者和其它服一样]</p><p>为了安全起见，需要更改一下帐号的场景下</p><p>把原来的游戏帐号 强制改成一个新的帐号</p>\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t",
+  "date": "2022-3-3",
+  "source": "起航飞飞",
+  "author": "admin888",
+  "source_url": "https://www.flyffstart.com/thread-11.htm"
+}

@@ -226,12 +226,18 @@ def article_page(cfg, it, kind, assets_path="assets/"):
     else:
         title = it.get("title", "")
         body_html = f'<div class="article-body">{body}</div>' if body else "<p>（暂无正文）</p>"
+    src_url = it.get("source_url") or it.get("url", "")
+    foot = (
+        f'<p class="foot"><a class="ext" href="{esc(src_url)}" '
+        f'target="_blank" rel="noopener">查看原文 ↗</a></p>'
+        if src_url else ""
+    )
     content = (
         f'<a class="back" href="{back}">← 返回{label}</a>'
         '<article class="article">'
         f"<h1>{esc(title)}</h1>{meta}"
         f"{body_html}"
-        f'<p class="foot"><a class="ext" href="{esc(it.get("url",""))}" target="_blank" rel="noopener">查看原文 ↗</a></p>'
+        f"{foot}"
         "</article>"
     )
     return render_page(cfg, title, content, "news" if kind == "news" else "know", assets_path)
