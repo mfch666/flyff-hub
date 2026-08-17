@@ -51,6 +51,9 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .qq-line{margin-top:6px;font-size:13px}
 .qq-link{color:var(--accent);font-weight:600;text-decoration:none}
 .qq-link:hover{text-decoration:underline}
+.qq-qr{display:inline-flex;flex-direction:column;align-items:center;gap:4px;margin-top:10px}
+.qq-qr img,.qq-qr canvas{display:block;border-radius:6px}
+.qr-tip{font-size:11px;color:var(--muted)}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
 </style>
@@ -62,6 +65,17 @@ a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decorati
 I am currently sharing my 2024 Florist Files V2. All duplication exploits related to the added systems have been fixed, including <b>AEGON_CRAFTING</b> and <b>WEAPON_RARITY and other systems</b>. These files were tested live for 4...<br />
 <br />
 <a href="https://forum.ragezone.com/threads/florist-custom-files-v2.1263932/" class="link link--internal">Read more</a></div></div></details><p class="foot"><a class="ext" href="https://forum.ragezone.com/threads/florist-custom-files-v2.1263932/" target="_blank" rel="noopener">查看原文 ↗</a></p></article></main>
-<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有<div class="qq-line">如有技术要求，可添加站长 QQ 发起会话：<a class="qq-link" href="https://wpa.qq.com/msgrd?v=3&amp;uin=225314824&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="点击发起 QQ 会话">225314824</a>（镍仔杭）</div></div></footer>
+<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有<div class="qq-line">如有技术要求，可添加站长 QQ 发起会话：<a class="qq-link" href="https://wpa.qq.com/msgrd?v=3&amp;uin=225314824&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="点击发起 QQ 会话">225314824</a>（镍仔杭）<div class="qq-qr"><div id="qq-qr"></div><span class="qr-tip">手机扫码发起会话</span></div></div></div></footer>
+<script src="../assets/qrcode.min.js"></script>
+<script>
+(function(){
+  try{
+    var u="https://wpa.qq.com/msgrd?v=3&uin=225314824&site=qq&menu=yes";
+    if(window.QRCode && u && document.getElementById('qq-qr')){
+      new QRCode(document.getElementById('qq-qr'),{text:u,width:96,height:96,colorDark:'#1f2430',colorLight:'#ffffff'});
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>

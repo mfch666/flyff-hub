@@ -96,6 +96,9 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .qq-line{margin-top:6px;font-size:13px}
 .qq-link{color:var(--accent);font-weight:600;text-decoration:none}
 .qq-link:hover{text-decoration:underline}
+.qq-qr{display:inline-flex;flex-direction:column;align-items:center;gap:4px;margin-top:10px}
+.qq-qr img,.qq-qr canvas{display:block;border-radius:6px}
+.qr-tip{font-size:11px;color:var(--muted)}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
 """
@@ -113,11 +116,22 @@ BASE = """<!DOCTYPE html>
 {{head}}
 <main class="wrap">{{content}}</main>
 <footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有{{qq_line}}</div></footer>
+<script src="{{assets_path}}qrcode.min.js"></script>
+<script>
+(function(){
+  try{
+    var u={{qq_chat_url_json}};
+    if(window.QRCode && u && document.getElementById('qq-qr')){
+      new QRCode(document.getElementById('qq-qr'),{text:u,width:96,height:96,colorDark:'#1f2430',colorLight:'#ffffff'});
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>"""
 
 
-def render_page(cfg, page_title, content, nav_active=""):
+def render_page(cfg, page_title, content, nav_active="", assets_path="assets/"):
     def navcls(k):
         return ' class="active"' if nav_active == k else ""
 
@@ -143,7 +157,8 @@ def render_page(cfg, page_title, content, nav_active=""):
             f'<a class="qq-link" href="{esc(chat_url)}" target="_blank" '
             f'rel="noopener" title="点击发起 QQ 会话">{esc(qq)}</a>'
             + (f"（{esc(qqname)}）" if qqname else "")
-            + "</div>"
+            + '<div class="qq-qr"><div id="qq-qr"></div>'
+            '<span class="qr-tip">手机扫码发起会话</span></div></div>'
         )
     else:
         qq_line = ""
@@ -157,6 +172,8 @@ def render_page(cfg, page_title, content, nav_active=""):
         .replace("{{lang}}", esc(cfg["site"].get("lang", "zh-CN")))
         .replace("{{css}}", CSS)
         .replace("{{qq_line}}", qq_line)
+        .replace("{{qq_chat_url_json}}", json.dumps(chat_url))
+        .replace("{{assets_path}}", assets_path)
     )
 
 
@@ -188,7 +205,7 @@ def know_card(it):
 </article>'''
 
 
-def article_page(cfg, it, kind):
+def article_page(cfg, it, kind, assets_path="assets/"):
     body = it.get("body_html") or it.get("body") or ""
     meta = (
         f'<div class="meta"><span class="date">{esc(it.get("date",""))}</span>'
@@ -225,7 +242,7 @@ def article_page(cfg, it, kind):
         f'<p class="foot"><a class="ext" href="{esc(it.get("url",""))}" target="_blank" rel="noopener">查看原文 ↗</a></p>'
         "</article>"
     )
-    return render_page(cfg, title, content, "news" if kind == "news" else "know")
+    return render_page(cfg, title, content, "news" if kind == "news" else "know", assets_path)
 
 
 def build():
@@ -261,13 +278,13 @@ def build():
         or '<p class="empty">暂无内容。</p>'
     )
     (PUBLIC_N / "index.html").write_text(
-        render_page(cfg, "新闻/发布", news_index, "news"), encoding="utf-8"
+        render_page(cfg, "新闻/发布", news_index, "news", "../assets/"), encoding="utf-8"
     )
 
     # 新闻详情页
     for n in news:
         (PUBLIC_N / f"{n['slug']}.html").write_text(
-            article_page(cfg, n, "news"), encoding="utf-8"
+            article_page(cfg, n, "news", "../assets/"), encoding="utf-8"
         )
 
     # 知识库列表页
@@ -275,13 +292,13 @@ def build():
         "".join(know_card(k) for k in know) or '<p class="empty">暂无内容。</p>'
     )
     (PUBLIC_K / "index.html").write_text(
-        render_page(cfg, "知识库", know_index, "know"), encoding="utf-8"
+        render_page(cfg, "知识库", know_index, "know", "../assets/"), encoding="utf-8"
     )
 
     # 知识库详情页
     for k in know:
         (PUBLIC_K / f"{k['slug']}.html").write_text(
-            article_page(cfg, k, "know"), encoding="utf-8"
+            article_page(cfg, k, "know", "../assets/"), encoding="utf-8"
         )
 
     print(
