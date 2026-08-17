@@ -50,38 +50,6 @@ def esc(s):
     return html.escape(str(s or ""), quote=False)
 
 
-def _kw_tip_html(kws, tip):
-    """把关键词列表按长度降序，生成悬停提示包装函数。"""
-    ordered = sorted(set(kws), key=len, reverse=True)
-
-    def wrap(text):
-        t = str(text or "")
-        for kw in ordered:
-            if not kw:
-                continue
-            t = t.replace(
-                kw,
-                f'<span class="kw">{kw}<span class="kw-tip">{esc(tip)}</span></span>',
-            )
-        return t
-
-    def wrap_html(html_text):
-        # 仅在文本节点里替换，不破坏 HTML 标签/属性
-        parts = re.split(r"(<[^>]+>)", str(html_text or ""))
-        for i, p in enumerate(parts):
-            if p.startswith("<") and p.endswith(">"):
-                continue
-            parts[i] = wrap(p)
-        return "".join(parts)
-
-    return wrap, wrap_html
-
-
-# 关键词悬停提示的默认实现（build() 中会按 config 重新初始化）
-_WRAP = lambda t: t
-_WRAP_HTML = lambda t: t
-
-
 CSS = """
 :root{--bg:#f7f8fa;--card:#fff;--text:#1f2430;--muted:#6b7280;--line:#e5e7eb;--accent:#3b6d11;--hot:#c0392b}
 *{box-sizing:border-box}
@@ -124,11 +92,10 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .orig-wrap .orig-title{font-size:13px;color:#9aa3ad;font-style:italic;margin:0 0 8px}
 .orig-body{padding:0 14px 14px;color:#4b5563;font-size:13px}
 .orig-body img{max-width:100%}
-.kw{position:relative;border-bottom:1px dashed var(--accent);cursor:help;color:var(--accent);font-weight:500}
-.kw-tip{display:none;position:absolute;left:50%;bottom:145%;transform:translateX(-50%);z-index:30;background:#1f2430;color:#fff;padding:6px 11px;border-radius:8px;font-size:12px;white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,.22)}
-.kw-tip:after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:#1f2430}
-.kw:hover .kw-tip{display:block}
 .site-foot{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:20px 0;text-align:center}
+.qq-line{margin-top:6px;font-size:13px}
+.qq-link{color:var(--accent);font-weight:600;text-decoration:none}
+.qq-link:hover{text-decoration:underline}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
 """
@@ -145,7 +112,7 @@ BASE = """<!DOCTYPE html>
 <body>
 {{head}}
 <main class="wrap">{{content}}</main>
-<footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有</div></footer>
+<footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有{{qq_line}}</div></footer>
 </body>
 </html>"""
 
@@ -163,6 +130,20 @@ def render_page(cfg, page_title, content, nav_active=""):
         f'<a href="knowledge/index.html"{navcls("know")}>知识库</a>'
         "</nav></div></header>"
     )
+    owner = cfg.get("owner", {}) or {}
+    qq = owner.get("qq", "")
+    qqname = owner.get("name", "")
+    tip = owner.get("tip", "如有技术要求，可添加站长 QQ 咨询")
+    if qq:
+        qq_line = (
+            f'<div class="qq-line">{esc(tip)}：'
+            f'<a class="qq-link" href="tencent://message/?uin={esc(qq)}" '
+            f'title="点击发起 QQ 会话">{esc(qq)}</a>'
+            + (f"（{esc(qqname)}）" if qqname else "")
+            + "</div>"
+        )
+    else:
+        qq_line = ""
     return (
         BASE.replace("{{page_title}}", esc(page_title))
         .replace("{{site_title}}", esc(cfg["site"]["title"]))
@@ -172,6 +153,7 @@ def render_page(cfg, page_title, content, nav_active=""):
         .replace("{{year}}", str(datetime.now().year))
         .replace("{{lang}}", esc(cfg["site"].get("lang", "zh-CN")))
         .replace("{{css}}", CSS)
+        .replace("{{qq_line}}", qq_line)
     )
 
 
@@ -190,7 +172,7 @@ def news_card(it, cfg):
   <div class="meta"><span class="date">{esc(it.get("date",""))}</span><span class="src">{esc(it.get("source",""))}</span>{hot}</div>
   <h2><a href="news/{esc(it.get("slug",""))}.html">{esc(title)}</a></h2>
   {orig_line}
-    <p class="excerpt">{_WRAP(excerpt)}</p>
+    <p class="excerpt">{esc(excerpt)}</p>
   <div class="foot"><a class="ext" href="{esc(it.get("url",""))}" target="_blank" rel="noopener">查看原文 ↗</a>{comments}</div>
 </article>'''
 
@@ -199,7 +181,7 @@ def know_card(it):
     return f'''<article class="card">
   <div class="meta"><span class="src">{esc(it.get("tag","知识"))}</span></div>
   <h2><a href="knowledge/{esc(it.get("slug",""))}.html">{esc(it.get("title",""))}</a></h2>
-  <p class="excerpt">{_WRAP(it.get("excerpt",""))}</p>
+  <p class="excerpt">{esc(it.get("excerpt",""))}</p>
 </article>'''
 
 
@@ -222,16 +204,16 @@ def article_page(cfg, it, kind):
             if orig_title:
                 inner += f'<p class="orig-title">原标题：{esc(orig_title)}</p>'
             if body:
-                inner += f'<div class="article-body orig-body">{_WRAP_HTML(body)}</div>'
+                inner += f'<div class="article-body orig-body">{body}</div>'
             orig_block = (
                 '<details class="orig-wrap"><summary>原文（English）</summary>'
                 f"{inner}</details>"
             )
-        lead_html = f'<p class="lead">{_WRAP(lead)}</p>' if lead else ""
+        lead_html = f'<p class="lead">{esc(lead)}</p>' if lead else ""
         body_html = lead_html + orig_block
     else:
         title = it.get("title", "")
-        body_html = f'<div class="article-body">{_WRAP_HTML(body)}</div>' if body else "<p>（暂无正文）</p>"
+        body_html = f'<div class="article-body">{body}</div>' if body else "<p>（暂无正文）</p>"
     content = (
         f'<a class="back" href="{back}">← 返回{label}</a>'
         '<article class="article">'
@@ -244,12 +226,7 @@ def article_page(cfg, it, kind):
 
 
 def build():
-    global _WRAP, _WRAP_HTML
     cfg = load_config()
-    ht = cfg.get("hover_tip", {}) or {}
-    _WRAP, _WRAP_HTML = _kw_tip_html(
-        ht.get("keywords", []), ht.get("text", "")
-    )
     news = load_news()
     know = load_knowledge()
 
