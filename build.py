@@ -115,7 +115,7 @@ BASE = """<!DOCTYPE html>
 <body>
 {{head}}
 <main class="wrap">{{content}}</main>
-<footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有{{qq_line}}</div></footer>
+<footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，版权归原作者所有{{qq_line}}</div></footer>
 </body>
 </html>"""
 
