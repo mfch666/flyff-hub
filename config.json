@@ -1,0 +1,23 @@
+{
+  "site": {
+    "title": "Flyff 知识站",
+    "subtitle": "Flyff 新闻 · 技术发布 · 热门话题聚合",
+    "lang": "zh-CN",
+    "description": "聚合 RageZone FlyFF Releases 技术发布与 ruiwoo 新闻，面向 Flyff 玩家的知识与资讯站。"
+  },
+  "sources": [
+    {
+      "name": "RageZone FlyFF Releases",
+      "type": "rss",
+      "url": "https://forum.ragezone.com/community/flyff-releases.457/index.rss",
+      "category": "release"
+    },
+    {
+      "name": "ruiwoo 新闻",
+      "type": "ruiwoo_api",
+      "url": "https://ff.ruiwoo.cn/api/fly/newsType_page",
+      "category": "news"
+    }
+  ],
+  "hot_threshold": 10
+}

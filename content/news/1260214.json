@@ -1,0 +1,12 @@
+{
+  "title": "Mini Release Random Weather",
+  "url": "https://forum.ragezone.com/threads/mini-release-random-weather.1260214/",
+  "date": "2026-08-04",
+  "source": "RageZone FlyFF Releases",
+  "author": "Soturi1991",
+  "comments": 6,
+  "category": "release",
+  "excerpt": "i release the mini source change for random weather.\nfall snow slow, fall snow fast and rain.\nThis code make random a weather all 2-5 min you can change this\nhave fun.\n\n#define __RANDOM_WEATHER                            // Added Random Wea",
+  "body_html": "<div class=\"bbWrapper\">i release the mini source change for random weather.<br />\nfall snow slow, fall snow fast and rain.<br />\nThis code make random a weather all 2-5 min you can change this<br />\nhave fun.<br />\n<br />\n#define __RANDOM_WEATHER                            // Added Random Weather...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/mini-release-random-weather.1260214/\" class=\"link link--internal\">Read more</a></div>",
+  "slug": "1260214"
+}
