@@ -1,5 +1,6 @@
 {
   "slug": "tommms-help",
+  "pinned": true,
   "tag": "技术文档",
   "title": "起航节点转发（配置中心）使用帮助摘要",
   "excerpt": "起航节点转发（edge.tommms.com 配置中心）可隐藏真实服务器 IP、断线保护、自动故障切换，免费保护开服安全。本文为官方帮助页的中文摘要。",

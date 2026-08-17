@@ -43,6 +43,8 @@ def load_knowledge():
                 items.append(json.loads(f.read_text(encoding="utf-8")))
             except Exception:
                 pass
+    # 置顶项排在最前（稳定排序，组内保持原有顺序）
+    items.sort(key=lambda x: 0 if x.get("pinned") else 1)
     return items
 
 
@@ -78,6 +80,7 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .comments{color:var(--muted)}
 .badge{font-size:11px;padding:2px 8px;border-radius:999px;font-weight:600}
 .badge.hot{background:#fdecea;color:var(--hot)}
+.badge.pin{background:#fff7e6;color:#b8860b}
 .src{background:#eef2ea;color:#3b6d11;padding:1px 8px;border-radius:6px}
 .article{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
 .article h1{margin-top:0;font-size:24px}
@@ -198,8 +201,9 @@ def news_card(it, cfg, link_prefix="news/"):
 
 
 def know_card(it, link_prefix="knowledge/"):
+    pin = '<span class="badge pin">置顶</span>' if it.get("pinned") else ""
     return f'''<article class="card">
-  <div class="meta"><span class="src">{esc(it.get("tag","知识"))}</span></div>
+  <div class="meta"><span class="src">{esc(it.get("tag","知识"))}</span>{pin}</div>
   <h2><a href="{esc(link_prefix)}{esc(it.get("slug",""))}.html">{esc(it.get("title",""))}</a></h2>
   <p class="excerpt">{esc(it.get("excerpt",""))}</p>
 </article>'''
