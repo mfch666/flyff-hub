@@ -239,10 +239,12 @@ def article_page(cfg, it, kind, assets_path="assets/"):
         title = it.get("title", "")
         body_html = f'<div class="article-body">{body}</div>' if body else "<p>（暂无正文）</p>"
     src_url = it.get("source_url") or it.get("url", "")
+    # 默认展示外链；显式 link_source=false，或来源为将下架的 flyffstart.com 时不展示
+    show_link = it.get("link_source", True) and "flyffstart.com" not in src_url
     foot = (
         f'<p class="foot"><a class="ext" href="{esc(src_url)}" '
         f'target="_blank" rel="noopener">查看原文 ↗</a></p>'
-        if src_url else ""
+        if (src_url and show_link) else ""
     )
     content = (
         f'<a class="back" href="{back}">← 返回{label}</a>'
