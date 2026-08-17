@@ -96,8 +96,8 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .qq-line{margin-top:6px;font-size:13px}
 .qq-link{color:var(--accent);font-weight:600;text-decoration:none}
 .qq-link:hover{text-decoration:underline}
-.qq-qr{display:inline-flex;flex-direction:column;align-items:center;gap:4px;margin-top:10px}
-.qq-qr img,.qq-qr canvas{display:block;border-radius:6px}
+.qq-qr{display:inline-flex;flex-direction:column;align-items:center;gap:6px;margin-top:12px}
+.qq-qr-img{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);border-radius:8px;padding:5px;background:#fff;display:block}
 .qr-tip{font-size:11px;color:var(--muted)}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
@@ -116,17 +116,6 @@ BASE = """<!DOCTYPE html>
 {{head}}
 <main class="wrap">{{content}}</main>
 <footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有{{qq_line}}</div></footer>
-<script src="{{assets_path}}qrcode.min.js"></script>
-<script>
-(function(){
-  try{
-    var u={{qq_chat_url_json}};
-    if(window.QRCode && u && document.getElementById('qq-qr')){
-      new QRCode(document.getElementById('qq-qr'),{text:u,width:96,height:96,colorDark:'#1f2430',colorLight:'#ffffff'});
-    }
-  }catch(e){}
-})();
-</script>
 </body>
 </html>"""
 
@@ -147,18 +136,23 @@ def render_page(cfg, page_title, content, nav_active="", assets_path="assets/"):
     owner = cfg.get("owner", {}) or {}
     qq = owner.get("qq", "")
     qqname = owner.get("name", "")
-    tip = owner.get("tip", "如有技术要求，可添加站长 QQ 咨询")
-    # 优先用官方网页临时会话入口（wpa.qq.com），兼容性优于已失效的 tencent:// 本地协议；
-    # 未配置则回退到 tencent://message/?uin= 协议唤起本机 QQ。
-    chat_url = owner.get("chat_url") or (f"tencent://message/?uin={qq}" if qq else "")
+    tip = owner.get("tip", "如有技术要求，可添加站长 QQ")
+    qr = owner.get("qr", "")
     if qq:
+        qr_html = ""
+        if qr:
+            qr_html = (
+                f'<div class="qq-qr"><img class="qq-qr-img" '
+                f'src="{esc(assets_path + qr)}" '
+                f'alt="站长 QQ 二维码（{esc(qqname or qq)}）">'
+                f'<span class="qr-tip">手机扫一扫，添加站长 QQ</span></div>'
+            )
         qq_line = (
             f'<div class="qq-line">{esc(tip)}：'
-            f'<a class="qq-link" href="{esc(chat_url)}" target="_blank" '
-            f'rel="noopener" title="点击发起 QQ 会话">{esc(qq)}</a>'
+            f'<span class="qq-num">{esc(qq)}</span>'
             + (f"（{esc(qqname)}）" if qqname else "")
-            + '<div class="qq-qr"><div id="qq-qr"></div>'
-            '<span class="qr-tip">手机扫码发起会话</span></div></div>'
+            + qr_html
+            + "</div>"
         )
     else:
         qq_line = ""
@@ -172,8 +166,6 @@ def render_page(cfg, page_title, content, nav_active="", assets_path="assets/"):
         .replace("{{lang}}", esc(cfg["site"].get("lang", "zh-CN")))
         .replace("{{css}}", CSS)
         .replace("{{qq_line}}", qq_line)
-        .replace("{{qq_chat_url_json}}", json.dumps(chat_url))
-        .replace("{{assets_path}}", assets_path)
     )
 
 

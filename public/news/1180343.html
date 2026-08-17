@@ -51,8 +51,8 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .qq-line{margin-top:6px;font-size:13px}
 .qq-link{color:var(--accent);font-weight:600;text-decoration:none}
 .qq-link:hover{text-decoration:underline}
-.qq-qr{display:inline-flex;flex-direction:column;align-items:center;gap:4px;margin-top:10px}
-.qq-qr img,.qq-qr canvas{display:block;border-radius:6px}
+.qq-qr{display:inline-flex;flex-direction:column;align-items:center;gap:6px;margin-top:12px}
+.qq-qr-img{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);border-radius:8px;padding:5px;background:#fff;display:block}
 .qr-tip{font-size:11px;color:var(--muted)}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
@@ -62,17 +62,6 @@ a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decorati
 <header class="site-head"><div class="wrap"><a class="brand" href="index.html">Flyff 知识站</a><nav><a href="index.html">首页</a><a href="news/index.html" class="active">新闻/发布</a><a href="knowledge/index.html">知识库</a></nav></div></header>
 <main class="wrap"><a class="back" href="news/index.html">← 返回新闻/发布</a><article class="article"><h1>时装 / 外观讨论帖</h1><div class="meta"><span class="date">2026-07-20</span><span class="src">RageZone FlyFF Releases</span><span class="author">Fiddly</span></div><p class="lead">Fiddly 作为论坛新人，在自行研究 Flyff 私服的过程中专门投入于时装与外观方向，并在逐渐掌握游戏内模型导入结构后，持续分享相关成果与心得。</p><details class="orig-wrap"><summary>原文（English）</summary><p class="orig-title">原标题：Fashion Thread</p><div class="article-body orig-body"><div class="bbWrapper"><div style="text-align: center">Hello RaGEZONE, Since I&#039;m new here and testing out Flyff private servers in my own time I&#039;ve decided to dedicate most of it into fashion and since I finally understand the structure of getting models to work in game I&#039;ll most likely be...&#8203;</div><br />
 <a href="https://forum.ragezone.com/threads/fashion-thread.1180343/" class="link link--internal">Read more</a></div></div></details><p class="foot"><a class="ext" href="https://forum.ragezone.com/threads/fashion-thread.1180343/" target="_blank" rel="noopener">查看原文 ↗</a></p></article></main>
-<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有<div class="qq-line">如有技术要求，可添加站长 QQ 发起会话：<a class="qq-link" href="https://wpa.qq.com/msgrd?v=3&amp;uin=225314824&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="点击发起 QQ 会话">225314824</a>（镍仔杭）<div class="qq-qr"><div id="qq-qr"></div><span class="qr-tip">手机扫码发起会话</span></div></div></div></footer>
-<script src="../assets/qrcode.min.js"></script>
-<script>
-(function(){
-  try{
-    var u="https://wpa.qq.com/msgrd?v=3&uin=225314824&site=qq&menu=yes";
-    if(window.QRCode && u && document.getElementById('qq-qr')){
-      new QRCode(document.getElementById('qq-qr'),{text:u,width:96,height:96,colorDark:'#1f2430',colorLight:'#ffffff'});
-    }
-  }catch(e){}
-})();
-</script>
+<footer class="site-foot"><div class="wrap">© 2026 Flyff 知识站 · 内容聚合自 RageZone FlyFF Releases，由 AI 用中文重新整理，版权归原作者所有<div class="qq-line">如有技术要求，可扫码或搜索添加站长 QQ：<span class="qq-num">225314824</span>（镍仔杭）<div class="qq-qr"><img class="qq-qr-img" src="../assets/94DAEC8884C9D819D6BC526BBD2CE032.jpg" alt="站长 QQ 二维码（镍仔杭）"><span class="qr-tip">手机扫一扫，添加站长 QQ</span></div></div></div></footer>
 </body>
 </html>
