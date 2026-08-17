@@ -120,17 +120,25 @@ BASE = """<!DOCTYPE html>
 </html>"""
 
 
-def render_page(cfg, page_title, content, nav_active="", assets_path="assets/"):
+def render_page(cfg, page_title, content, nav_active="", assets_path="assets/", base="root"):
     def navcls(k):
         return ' class="active"' if nav_active == k else ""
 
+    # 根据页面所在层级，生成正确的相对导航路径
+    if base == "news":
+        home_href, news_href, know_href = "../index.html", "index.html", "../knowledge/index.html"
+    elif base == "knowledge":
+        home_href, news_href, know_href = "../index.html", "../news/index.html", "index.html"
+    else:  # root
+        home_href, news_href, know_href = "index.html", "news/index.html", "knowledge/index.html"
+
     head = (
         '<header class="site-head"><div class="wrap">'
-        f'<a class="brand" href="index.html">{esc(cfg["site"]["title"])}</a>'
+        f'<a class="brand" href="{home_href}">{esc(cfg["site"]["title"])}</a>'
         "<nav>"
-        f'<a href="index.html"{navcls("home")}>首页</a>'
-        f'<a href="news/index.html"{navcls("news")}>新闻/发布</a>'
-        f'<a href="knowledge/index.html"{navcls("know")}>知识库</a>'
+        f'<a href="{home_href}"{navcls("home")}>首页</a>'
+        f'<a href="{news_href}"{navcls("news")}>新闻/发布</a>'
+        f'<a href="{know_href}"{navcls("know")}>知识库</a>'
         "</nav></div></header>"
     )
     owner = cfg.get("owner", {}) or {}
@@ -169,7 +177,7 @@ def render_page(cfg, page_title, content, nav_active="", assets_path="assets/"):
     )
 
 
-def news_card(it, cfg):
+def news_card(it, cfg, link_prefix="news/"):
     hot = ""
     if int(it.get("comments") or 0) >= cfg.get("hot_threshold", 30):
         hot = f'<span class="badge hot">热门 · {it["comments"]} 评论</span>'
@@ -182,17 +190,17 @@ def news_card(it, cfg):
     orig_line = f'<div class="orig">原文：{esc(orig)}</div>' if orig else ""
     return f'''<article class="card">
   <div class="meta"><span class="date">{esc(it.get("date",""))}</span><span class="src">{esc(it.get("source",""))}</span>{hot}</div>
-  <h2><a href="news/{esc(it.get("slug",""))}.html">{esc(title)}</a></h2>
+  <h2><a href="{esc(link_prefix)}{esc(it.get("slug",""))}.html">{esc(title)}</a></h2>
   {orig_line}
     <p class="excerpt">{esc(excerpt)}</p>
   <div class="foot"><a class="ext" href="{esc(it.get("url",""))}" target="_blank" rel="noopener">查看原文 ↗</a>{comments}</div>
 </article>'''
 
 
-def know_card(it):
+def know_card(it, link_prefix="knowledge/"):
     return f'''<article class="card">
   <div class="meta"><span class="src">{esc(it.get("tag","知识"))}</span></div>
-  <h2><a href="knowledge/{esc(it.get("slug",""))}.html">{esc(it.get("title",""))}</a></h2>
+  <h2><a href="{esc(link_prefix)}{esc(it.get("slug",""))}.html">{esc(it.get("title",""))}</a></h2>
   <p class="excerpt">{esc(it.get("excerpt",""))}</p>
 </article>'''
 
@@ -204,7 +212,7 @@ def article_page(cfg, it, kind, assets_path="assets/"):
         f'<span class="src">{esc(it.get("source",""))}</span>'
         f'<span class="author">{esc(it.get("author",""))}</span></div>'
     )
-    back = "news/index.html" if kind == "news" else "knowledge/index.html"
+    back = "index.html" if kind == "news" else "index.html"
     label = "新闻/发布" if kind == "news" else "知识库"
     if kind == "news":
         title = it.get("title_zh") or it.get("title", "")
@@ -240,7 +248,11 @@ def article_page(cfg, it, kind, assets_path="assets/"):
         f"{foot}"
         "</article>"
     )
-    return render_page(cfg, title, content, "news" if kind == "news" else "know", assets_path)
+    return render_page(
+        cfg, title, content,
+        "news" if kind == "news" else "know", assets_path,
+        "news" if kind == "news" else "knowledge",
+    )
 
 
 def build():
@@ -256,8 +268,8 @@ def build():
         + esc(cfg["site"]["subtitle"])
         + "</p></section>"
     )
-    latest = "".join(news_card(n, cfg) for n in news[:8]) or '<p class="empty">暂无新闻，运行 collect.py 采集。</p>'
-    know_list = "".join(know_card(k) for k in know) or '<p class="empty">暂无知识库内容。</p>'
+    latest = "".join(news_card(n, cfg, "news/") for n in news[:8]) or '<p class="empty">暂无新闻，运行 collect.py 采集。</p>'
+    know_list = "".join(know_card(k, "knowledge/") for k in know) or '<p class="empty">暂无知识库内容。</p>'
     index_content = (
         hero
         + '<h3 class="section-title">最新发布 / 新闻</h3>'
@@ -272,11 +284,11 @@ def build():
 
     # 新闻列表页
     news_index = '<h1>新闻 / 技术发布</h1>' + (
-        "".join(news_card(n, cfg) for n in news)
+        "".join(news_card(n, cfg, "") for n in news)
         or '<p class="empty">暂无内容。</p>'
     )
     (PUBLIC_N / "index.html").write_text(
-        render_page(cfg, "新闻/发布", news_index, "news", "../assets/"), encoding="utf-8"
+        render_page(cfg, "新闻/发布", news_index, "news", "../assets/", "news"), encoding="utf-8"
     )
 
     # 新闻详情页
@@ -287,10 +299,10 @@ def build():
 
     # 知识库列表页
     know_index = '<h1>知识库</h1>' + (
-        "".join(know_card(k) for k in know) or '<p class="empty">暂无内容。</p>'
+        "".join(know_card(k, "") for k in know) or '<p class="empty">暂无内容。</p>'
     )
     (PUBLIC_K / "index.html").write_text(
-        render_page(cfg, "知识库", know_index, "know", "../assets/"), encoding="utf-8"
+        render_page(cfg, "知识库", know_index, "know", "../assets/", "knowledge"), encoding="utf-8"
     )
 
     # 知识库详情页
