@@ -1,9 +1,9 @@
 {
   "site": {
-    "title": "Flyff 知识站",
-    "subtitle": "Flyff 技术发布 · 私服源码 · 热门话题聚合（中文整理）",
+    "title": "飞飞起航 知识站",
+    "subtitle": "Flyff 技术发布,飞飞源码,老飞飞,飞飞技术,起航飞飞,塔罗牌,",
     "lang": "zh-CN",
-    "description": "聚合 RageZone FlyFF Releases 的技术发布与热门讨论，由 AI 用中文重新整理描述，面向 Flyff 玩家与开发者。"
+    "description": "聚合 RageZone FlyFF Releases 的技术发布与热门讨论，面向 Flyff 玩家与开发者。"
   },
   "sources": [
     {
