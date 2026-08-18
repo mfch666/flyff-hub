@@ -1,7 +1,7 @@
 {
   "name": "flyff-hub",
   "installCommand": "",
-  "buildCommand": "",
+  "buildCommand": "echo skipped; exit 0",
   "assets": {
     "directory": "./public",
     "notFoundStrategy": "singlePageApplication"

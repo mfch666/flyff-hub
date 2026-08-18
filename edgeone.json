@@ -1,6 +1,6 @@
 {
   "name": "flyff-hub",
-  "buildCommand": "",
+  "buildCommand": "echo skipped; exit 0",
   "installCommand": "",
   "outputDirectory": "./public"
 }
