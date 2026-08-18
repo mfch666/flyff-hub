@@ -1,0 +1,9 @@
+{
+  "name": "flyff-hub",
+  "installCommand": "",
+  "buildCommand": "",
+  "assets": {
+    "directory": "./public",
+    "notFoundStrategy": "singlePageApplication"
+  }
+}
