@@ -1,0 +1,6 @@
+{
+  "name": "flyff-hub",
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": "./public"
+}
