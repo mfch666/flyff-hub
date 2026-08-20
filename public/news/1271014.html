@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Legion FlyFF（Florist 2026）Cleaned up &amp; Custom Smexy 版本 · 飞飞起航 知识站</title>
+<meta name="description" content="Flyff 技术发布,飞飞源码,老飞飞,飞飞技术,起航飞飞,塔罗牌">
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--text:#1f2430;--muted:#6b7280;--line:#e5e7eb;--accent:#3b6d11;--hot:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+.site-head{background:#fff;border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:700;font-size:18px;color:var(--text);text-decoration:none}
+.site-head nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-size:14px}
+.site-head nav a.active{color:var(--accent);font-weight:600}
+main.wrap{padding-top:28px;padding-bottom:48px}
+.hero{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:24px}
+.hero h1{margin:0 0 8px;font-size:26px}
+.hero p{margin:0;color:var(--muted)}
+.section-title{font-size:18px;margin:28px 0 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px;transition:border-color .15s}
+.card:hover{border-color:#c9d2c0}
+.card h2{margin:6px 0;font-size:17px;line-height:1.4}
+.card h2 a{color:var(--text);text-decoration:none}
+.card h2 a:hover{color:var(--accent)}
+.meta{font-size:12px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.orig{font-size:12px;color:#9aa3ad;margin:4px 0 0;font-style:italic}
+.excerpt{color:#374151;font-size:14px;margin:8px 0}
+.foot{font-size:13px;margin-top:6px;display:flex;gap:14px;align-items:center}
+.ext{color:var(--accent);text-decoration:none}
+.comments{color:var(--muted)}
+.badge{font-size:11px;padding:2px 8px;border-radius:999px;font-weight:600}
+.badge.hot{background:#fdecea;color:var(--hot)}
+.badge.pin{background:#fff7e6;color:#b8860b}
+.src{background:#eef2ea;color:#3b6d11;padding:1px 8px;border-radius:6px}
+.article{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.article h1{margin-top:0;font-size:24px}
+.article .meta{margin-bottom:16px}
+.article-body{font-size:15px}
+.article-body img{max-width:100%}
+.article-body a{color:var(--accent)}
+.article .lead{font-size:15px;color:#1f2430;background:#f3f6ee;border-left:3px solid var(--accent);padding:12px 14px;border-radius:8px;margin:14px 0}
+.orig-wrap{margin:18px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.orig-wrap summary{cursor:pointer;padding:10px 14px;background:#fafbfc;font-size:13px;color:var(--muted);user-select:none}
+.orig-wrap summary:hover{color:var(--accent)}
+.orig-wrap .orig-title{font-size:13px;color:#9aa3ad;font-style:italic;margin:0 0 8px}
+.orig-body{padding:0 14px 14px;color:#4b5563;font-size:13px}
+.orig-body img{max-width:100%}
+.site-foot{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:20px 0;text-align:center}
+.qq-line{margin-top:6px;font-size:13px}
+.qq-trigger{position:relative;display:inline-block;cursor:pointer;color:var(--accent);font-weight:600;border-bottom:1px dashed var(--accent)}
+.qq-popup{display:none;position:absolute;left:50%;bottom:150%;transform:translateX(-50%);z-index:50;flex-direction:column;align-items:center;gap:6px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.18);white-space:nowrap}
+.qq-trigger:hover .qq-popup,.qq-trigger:focus .qq-popup{display:flex}
+.qq-qr-img{width:140px;height:140px;object-fit:contain;border:1px solid var(--line);border-radius:8px;padding:5px;background:#fff;display:block}
+.qr-tip{font-size:11px;color:var(--muted)}
+a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
+.empty{color:var(--muted);padding:30px 0;text-align:center}
+</style>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="../index.html">飞飞起航 知识站</a><nav><a href="../index.html">首页</a><a href="index.html" class="active">新闻/发布</a><a href="../knowledge/index.html">知识库</a></nav></div></header>
+<main class="wrap"><a class="back" href="index.html">← 返回新闻/发布</a><article class="article"><h1>Legion FlyFF（Florist 2026）Cleaned up &amp; Custom Smexy 版本</h1><div class="meta"><span class="date">2026-08-19</span><span class="src">RageZone FlyFF Releases</span><span class="author">SmexySkullZz</span></div><p class="lead">本帖作者 SmexySkullZz 以 Zacks 于 2026 年 4 月 30 日发布的 Legion Files (Florist 2026) 源码为基础，进行了清理与定制，最终封装成一份干净的 "Ready out of the Box" 工作包。该版本去除了冗余内容，可直接运行或作为新项目的起点，适合希望快速上手 Legion 分支的玩家与开发者。</p><details class="orig-wrap"><summary>原文（English）</summary><p class="orig-title">原标题：Legion Flyff (Florist 2026) Cleaned up &amp; Custom Smexy Version</p><div class="article-body orig-body"><div class="bbWrapper">Greetings,<br />
+so I was playing around with the source that Zacks shared ([Release] Legions Files (Florist 2026) at Apr 30, 2026 - Ty for sharing) and put together a clean &quot;Ready out of the Box&quot; working pack as base to start or play around with (added...<br />
+<br />
+<a href="https://forum.ragezone.com/threads/legion-flyff-florist-2026-cleaned-up-custom-smexy-version.1271014/" class="link link--internal">Read more</a></div></div></details><p class="foot"><a class="ext" href="https://forum.ragezone.com/threads/legion-flyff-florist-2026-cleaned-up-custom-smexy-version.1271014/" target="_blank" rel="noopener">查看原文 ↗</a></p></article></main>
+<footer class="site-foot"><div class="wrap">© 2026 飞飞起航 知识站 · 内容聚合自 RageZone FlyFF Releases，版权归原作者所有<div class="qq-line"><span class="qq-trigger">如有任何技术需求或者服务需要，请联系站长<span class="qq-popup"><img class="qq-qr-img" src="../assets/20260818021754_31_511.png" alt="站长 QQ 二维码（镍仔杭）"><span class="qr-tip">手机扫一扫，添加站长 QQ：225314824（镍仔杭）</span></span></span></div></div></footer>
+</body>
+</html>
