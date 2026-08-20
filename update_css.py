@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>克拉岛 · 飞飞起航 知识站</title>
-<meta name="description" content="Flyff 技术发布,飞飞源码,老飞飞,飞飞技术,起航飞飞,塔罗牌">
-<style>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""更新 build.py 中的 CSS 样式"""
+
+new_css = r'''CSS = """
 /* ===== 基础变量 ===== */
 :root{
   --bg:#f0f2f5;
@@ -102,18 +99,18 @@ body{animation:fadeIn .3s ease}
 .card:nth-child(2){animation-delay:.1s}
 .card:nth-child(3){animation-delay:.15s}
 .card:nth-child(4){animation-delay:.2s}
-</style>
-</head>
-<body>
-<header class="site-head"><div class="wrap"><a class="brand" href="../index.html">飞飞起航 知识站</a><nav><a href="../index.html">首页</a><a href="../news/index.html">新闻/发布</a><a href="index.html" class="active">知识库</a></nav></div></header>
-<main class="wrap"><a class="back" href="index.html">← 返回知识库</a><article class="article"><h1>克拉岛</h1><div class="meta"><span class="date">2024-8-1</span><span class="src">起航飞飞</span><span class="author">admin888</span></div><div class="article-body">
-								
-					
-					<p>强化的克拉岛,在里面可以突破80大关,可摆脱上限宿命</p><p>岛内刷新77-85级的怪物，在里面可以产出相应的武器装备</p><p>岛内与大陆隔绝,不产垃圾[战栗,材料,药品,金币]，只产出：</p><p><span style="color:#ff0000">1.通常武器装备[77+]</span></p><p><span style="color:#ff0000">2.强化炼金药[初,中,高级]</span></p><p><span style="color:#ff0000">3.产出龙魂珠[升级卡第恩-&gt;悠久]</span></p><p><span style="color:#ff0000">4.产出卡第恩系列</span></p><p><span style="color:#ff0000">5.产出悠久系列[少量]</span></p><p><span style="color:#ff0000">6.产出幸运药</span></p><p><span style="color:#ff0000">7.岛内产出大部分物品不归属</span></p><p><span style="color:#ff0000"><br/></span></p><h3><strong style=""><span style="color:#00b050">进入岛内当然是有条件的</span></strong></h3><p><strong style=""><span style="color:#00b050"><span style="color: rgb(0, 0, 0);">1.需要在商城处花100W的游戏币购买通行证[神秘小岛入场票]</span><br/></span></strong></p><p><strong style=""><span style="color: rgb(0, 0, 0);">2.需要一把之前产出的垃圾配件[</span><span style="color:#ff0000"><span style="text-decoration:underline;">粉红小阳伞</span></span><span style="color: rgb(0, 0, 0);">]</span></strong></p><p><strong style=""><span style="color: rgb(0, 0, 0);">3.在岛内不允许使用其它HP消耗品,只允许</span><span style="color:#ff0000"><span style="text-decoration:underline;">星星糖自由</span></span><span style="color: rgb(0, 0, 0);">[指定]</span></strong></p><p><span style="color: rgb(0, 0, 0);"><strong>4.每次进岛持续时间为4小时,超时自动退出[</strong>中途可以退出<strong>]</strong></span></p><p><span style="color: rgb(0, 0, 0);"><strong><br/></strong></span></p><p><span style="color:#000000">岛内的怪物不再是小爆破那么弱鸡哦,挑战需要胆识,握稳80就挺香的</span></p><p><span style="color:#000000"><br/></span></p><p><strong style=""><span style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">由于本人测试还比较片面,后续根据实际不定期对岛内数据维护调整</span></span></strong></p><p><strong style=""><span style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">大家有什么意见或者见解也可以联系我补充 Q：</span></span></strong></p><p><img src="https://www.flyffstart.com/upload/attach/202408/1_3WMMKSYBHDPMRCZ.png" width="293" height="306"/><strong style=""><span style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);"></span></span></strong><br/></p>					
-					
-										
-					
-								</div></article></main>
-<footer class="site-foot"><div class="wrap">© 2026 飞飞起航 知识站 · 内容聚合自 RageZone FlyFF Releases，版权归原作者所有<div class="qq-line"><span class="qq-trigger">如有任何技术需求或者服务需要，请联系站长<span class="qq-popup"><img class="qq-qr-img" src="../assets/20260818021754_31_511.png" alt="站长 QQ 二维码（镍仔杭）"><span class="qr-tip">手机扫一扫，添加站长 QQ：225314824（镍仔杭）</span></span></span></div></div></footer>
-</body>
-</html>
+"""
+'''
+
+with open('build.py', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+start = content.find('CSS = """')
+end = content.find('"""', start + 7)
+
+new_content = content[:start] + new_css + content[end+3:]
+
+with open('build.py', 'w', encoding='utf-8') as f:
+    f.write(new_content)
+
+print('CSS updated successfully')
