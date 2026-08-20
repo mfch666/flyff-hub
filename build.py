@@ -104,6 +104,15 @@ main.wrap{padding-top:28px;padding-bottom:48px}
 .qr-tip{font-size:11px;color:var(--muted)}
 a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
+/* 404 页面样式 */
+.not-found{text-align:center;padding:60px 20px}
+.nf-icon{font-size:120px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:16px;opacity:0.15}
+.not-found h1{margin:0 0 12px;font-size:28px}
+.not-found > p{color:var(--muted);margin:0 0 32px}
+.nf-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.nf-btn{display:inline-block;padding:10px 24px;background:#fff;border:1px solid var(--line);border-radius:8px;color:var(--text);text-decoration:none;font-size:14px;transition:all .15s}
+.nf-btn:hover{border-color:var(--accent);color:var(--accent);background:#f7f8fa}
+.nf-auto{font-size:13px;color:var(--muted)}
 """
 
 BASE = """<!DOCTYPE html>
@@ -261,6 +270,91 @@ def article_page(cfg, it, kind, assets_path="assets/"):
     )
 
 
+def render_404(cfg):
+    """生成 404 页面，包含导航栏、页脚和视觉设计"""
+    def navcfg(k):
+        return ' class="active"' if k == "home" else ""
+
+    home_href, news_href, know_href = "index.html", "news/index.html", "knowledge/index.html"
+    head = (
+        '<header class="site-head"><div class="wrap">'
+        f'<a class="brand" href="{home_href}">{esc(cfg["site"]["title"])}</a>'
+        "<nav>"
+        f'<a href="{home_href}"{navcfg("home")}>首页</a>'
+        f'<a href="{news_href}"{navcfg("news")}>新闻/发布</a>'
+        f'<a href="{know_href}"{navcfg("know")}>知识库</a>'
+        "</nav></div></header>"
+    )
+
+    owner = cfg.get("owner", {}) or {}
+    qq = owner.get("qq", "")
+    qqname = owner.get("name", "")
+    tip = owner.get("tip", "如有技术要求，可添加站长 QQ")
+    qr = owner.get("qr", "")
+    if qq:
+        qr_html = ""
+        if qr:
+            qr_html = (
+                f'<span class="qq-popup">'
+                f'<img class="qq-qr-img" src="assets/{esc(qr)}" '
+                f'alt="站长 QQ 二维码（{esc(qqname or qq)}）">'
+                f'<span class="qr-tip">手机扫一扫，添加站长 QQ：{esc(qq)}'
+                + (f"（{esc(qqname)}）" if qqname else "")
+                + "</span></span>"
+            )
+        qq_line = (
+            f'<div class="qq-line">'
+            f'<span class="qq-trigger">{esc(tip)}{qr_html}</span>'
+            + "</div>"
+        )
+    else:
+        qq_line = ""
+
+    footer = (
+        f'<footer class="site-foot"><div class="wrap">'
+        f"© {datetime.now().year} {esc(cfg['site']['title'])} · "
+        "内容聚合自 RageZone FlyFF Releases，版权归原作者所有"
+        f"{qq_line}"
+        "</div></footer>"
+    )
+
+    # 404 内容区域
+    content = (
+        '<section class="not-found">'
+        '<div class="nf-icon">404</div>'
+        '<h1>页面不存在</h1>'
+        '<p>抱歉，您访问的页面已搬家或暂时无法找到</p>'
+        '<div class="nf-links">'
+        f'<a href="{home_href}" class="nf-btn">返回首页</a>'
+        f'<a href="{news_href}" class="nf-btn">浏览新闻</a>'
+        f'<a href="{know_href}" class="nf-btn">知识库</a>'
+        '</div>'
+        '<p class="nf-auto">页面即将自动跳转…</p>'
+        '</section>'
+    )
+
+    page = (
+        f'<!DOCTYPE html>\n'
+        f'<html lang="zh-CN">\n'
+        f'<head>\n'
+        f'<meta charset="utf-8">\n'
+        f'<meta name="viewport" content="width=device-width,initial-scale=1">\n'
+        f'<title>页面不存在 · {esc(cfg["site"]["title"])}</title>\n'
+        f'<meta name="description" content="{esc(cfg["site"]["subtitle"])}">\n'
+        f'<style>{CSS}</style>\n'
+        '</head>\n'
+        f'<body>\n'
+        f'{head}\n'
+        f'<main class="wrap">{content}</main>\n'
+        f'{footer}\n'
+        f'<script>window.location.replace("{home_href}");</script>\n'
+        f'</body>\n'
+        f'</html>'
+    )
+
+    return page
+
+
 def build():
     cfg = load_config()
     news = load_news()
@@ -320,6 +414,12 @@ def build():
     print(
         f"构建完成：{len(news)} 条新闻、{len(know)} 篇知识，已输出到 public/。"
     )
+
+    # 生成 404 页面
+    (PUBLIC / "404.html").write_text(
+        render_404(cfg), encoding="utf-8"
+    )
+    print("已生成 404.html")
 
 
 if __name__ == "__main__":
