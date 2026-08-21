@@ -164,7 +164,7 @@ BASE = """<!DOCTYPE html>
 <body>
 {{head}}
 <main class="wrap">{{content}}</main>
-<footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，版权归原作者所有{{qq_line}}</div></footer>
+<footer class="site-foot"><div class="wrap">© {{year}} {{site_title}} · 内容聚合自 RageZone FlyFF Releases，版权归原作者所有{{qq_line}} · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">粤ICP备14102256号</a></div></footer>
 </body>
 </html>"""
 
@@ -352,6 +352,7 @@ def render_404(cfg):
         f"© {datetime.now().year} {esc(cfg['site']['title'])} · "
         "内容聚合自 RageZone FlyFF Releases，版权归原作者所有"
         f"{qq_line}"
+        ' · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">粤ICP备14102256号</a>'
         "</div></footer>"
     )
 
