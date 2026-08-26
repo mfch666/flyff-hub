@@ -1,0 +1,16 @@
+{
+  "title": "[RELEASE] FlyFF V21 VS2022 - Database & PIN Fixes + New Systems",
+  "url": "https://forum.ragezone.com/threads/release-flyff-v21-vs2022-database-pin-fixes-new-systems.1271432/",
+  "date": "2026-08-26",
+  "source": "RageZone FlyFF Releases",
+  "author": "Zacks",
+  "comments": 1,
+  "category": "release",
+  "excerpt": "Hi,\n\nI’m releasing my updated version of the Flyff V21 VS2022 sources originally released by Péréotix.\n\nFirst important thing: run the LOG_ITEM_STR database fix before starting the server.\n\nThe original V21 database was missing a lot...\n\nRe",
+  "body_html": "<div class=\"bbWrapper\">Hi,<br />\n<br />\nI’m releasing my updated version of the <b>Flyff V21 VS2022 sources originally released by Péréotix</b>.<br />\n<br />\nFirst important thing: <b>run the LOG_ITEM_STR database fix before starting the server.</b><br />\n<br />\nThe original V21 database was missing a lot...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/release-flyff-v21-vs2022-database-pin-fixes-new-systems.1271432/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": false,
+  "slug": "1271432",
+  "title_zh": "[RELEASE] FlyFF V21 VS2022 - 数据库与 PIN 修复 + 新系统",
+  "excerpt_zh": "基于 Péréotix 原版 FlyFF V21 VS2022 源码的更新版本，附带数据库修复、PIN 系统修复及多项新系统。",
+  "summary_zh": "这是 Zacks 发布的 FlyFF V21 VS2022 源码更新版本，原作者为 Péréotix。启动服务器前必须先运行 LOG_ITEM_STR 数据库修复脚本，因为原版 V21 数据库存在大量缺失内容。本次更新包含数据库修复、PIN 系统修复以及若干新系统。"
+}
