@@ -8,6 +8,8 @@
   "category": "release",
   "excerpt": "This is a reupload of a closed thread from years ago.  From what i understand it&#039;s incomplete and may be buggy. I offer 0 support on this.\n\nWhat&#039;s Included:\n- DirectX Libraries\n- Fmod\n- HTML file detailing how to...\n\nRead more",
   "body_html": "<div class=\"bbWrapper\">This is a reupload of a closed thread from years ago.  From what i understand it&#039;s incomplete and may be buggy. <b><span style=\"color: rgb(184, 49, 47)\">I offer 0 support on this.</span></b><br />\n<br />\n<span style=\"color: rgb(41, 105, 176)\"><b>What&#039;s Included:</b></span><br />\n<span style=\"color: null\">- DirectX Libraries<br />\n- Fmod<br />\n- HTML file detailing how to...</span><br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/64bit-for-flyff.1233925/\" class=\"link link--internal\">Read more</a></div>",
-  "needs_translation": true,
+  "needs_translation": false,
+  "title_zh": "【发布】FlyFF 64位移植版",
+  "excerpt_zh": "这是多年前一个已关闭帖子的重新上传。据我所知，该版本不完整且可能存在Bug。本人不提供任何技术支持。\n\n包含内容：\n- DirectX 库\n- Fmod\n- 详细说明如何...的HTML文件\n\n阅读原文",
   "slug": "1233925"
 }
