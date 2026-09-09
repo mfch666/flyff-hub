@@ -274,6 +274,12 @@ def article_page(cfg, it, kind, assets_path="assets/"):
             if orig_title:
                 inner += f'<p class="orig-title">原标题：{esc(orig_title)}</p>'
             if body:
+                # 正文内所有外链在新窗口打开，防止原站路径丢失
+                body = re.sub(
+                    r'<a([^>]*)\bhref="([^"]+)"',
+                    r'<a\1href="\2" target="_blank" rel="noopener"',
+                    body,
+                )
                 inner += f'<div class="article-body orig-body">{body}</div>'
             orig_block = (
                 '<details class="orig-wrap"><summary>原文（English）</summary>'
@@ -283,6 +289,12 @@ def article_page(cfg, it, kind, assets_path="assets/"):
         body_html = lead_html + orig_block
     else:
         title = it.get("title", "")
+        if body:
+            body = re.sub(
+                r'<a([^>]*)\bhref="([^"]+)"',
+                r'<a\1href="\2" target="_blank" rel="noopener"',
+                body,
+            )
         body_html = f'<div class="article-body">{body}</div>' if body else "<p>（暂无正文）</p>"
     src_url = it.get("source_url") or it.get("url", "")
     # 默认展示外链；显式 link_source=false，或来源为将下架的 flyffstart.com 时不展示
