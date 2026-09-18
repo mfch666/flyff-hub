@@ -8,6 +8,9 @@
   "category": "release",
   "excerpt": "Heyo!\n\nMain differences to my other Release:\n- Heavy Overhaul of Items and their effects, same for Sets, Weapons and even Accessories\n- Progression, based on the new effetcs\n- Drops, Penya and their rates, incremental increase...\n\nRead more",
   "body_html": "<div class=\"bbWrapper\"><b><span style=\"font-size: 15px\">Heyo!</span></b><br />\n<br />\n<span style=\"font-size: 15px\"><b>Main differences to my other Release:<br />\n- Heavy Overhaul of Items and their effects, same for Sets, Weapons and even Accessories<br />\n- Progression, based on the new effetcs<br />\n- Drops, Penya and their rates, incremental increase...</b></span><br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/vs22-flyff-v15-custom-stable-base-enhanced-version-full-files-ready-to-play.1239493/\" class=\"link link--internal\">Read more</a></div>",
-  "needs_translation": true,
-  "slug": "1239493"
+  "needs_translation": false,
+  "slug": "1239493",
+  "title_zh": "[VS22] Flyff V15 自制版 - 稳定基座增强版 - 完整文件 - 即开即玩",
+  "excerpt_zh": "嗨！\n\n与我其他发布版本的主要区别：\n- 物品及其效果大幅重构，套装、武器乃至饰品同样如此\n- 基于新效果的成长体系\n- 掉落、Penya 及其概率，渐进式提升……",
+  "summary_zh": "Nocolicious 发布的 Flyff V15 稳定基座增强版（VS22 编译），提供完整文件、即开即玩。相比他此前的发布，本版对物品效果、套装/武器/饰品进行了大幅重构，并基于新效果重新设计了成长体系与掉落、Penya 概率（渐进式提升）。"
 }
