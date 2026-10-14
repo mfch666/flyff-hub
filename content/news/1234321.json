@@ -8,6 +8,9 @@
   "category": "release",
   "excerpt": "These files are base in the previous release and adding some features, credits fully to Florist. Enjoy \n\nTested On:\n\nVisual Studio 2013\nSql Server 2016 Standard\nWindows 10 &amp; 11 Professional\nAdded Features:\n-Added...\n\nRead more",
   "body_html": "<div class=\"bbWrapper\">These files are base in the previous release and adding some features, credits fully to Florist. Enjoy <img src=\"https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f642.png\" class=\"smilie smilie--emoji\" loading=\"lazy\" width=\"64\" height=\"64\" alt=\":)\" title=\"Smile    :)\"  data-smilie=\"1\"data-shortname=\":)\" /><br />\n<br />\n<b>Tested On:</b><br />\n<ul>\n<li data-xf-list-type=\"ul\">Visual Studio 2013</li>\n<li data-xf-list-type=\"ul\">Sql Server 2016 Standard</li>\n<li data-xf-list-type=\"ul\">Windows 10 &amp; 11 Professional</li>\n</ul><b>Added Features:</b><br />\n-Added...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/release-my-guru-flyff-2024-updated.1234321/\" class=\"link link--internal\">Read more</a></div>",
-  "needs_translation": true,
-  "slug": "1234321"
+  "needs_translation": false,
+  "slug": "1234321",
+  "title_zh": "发布我的 Guru 飞飞 2024（更新版）",
+  "excerpt_zh": "基于之前版本更新，增加新功能，全部由 Florist 编写测试环境：Visual Studio 2013、SQL Server 2016 Standard、Windows 10/11 专业版。",
+  "summary_zh": "本次更新基于先前发布的版本，新增了多项功能，全部由 Florist 编写。作者已在 Visual Studio 2013、SQL Server 2016 Standard、Windows 10 及 Windows 11 专业版上测试通过。"
 }
