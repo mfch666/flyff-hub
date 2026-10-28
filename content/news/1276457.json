@@ -1,0 +1,16 @@
+{
+  "title": "[ Release ] Flyff on browser - a browser server/client",
+  "url": "https://forum.ragezone.com/threads/release-flyff-on-browser-a-browser-server-client.1276457/",
+  "date": "2026-10-28",
+  "source": "RageZone FlyFF Releases",
+  "author": "lettus",
+  "comments": 21,
+  "category": "release",
+  "excerpt": "这是作者与 Claude Code 合作开发的一个全新项目的开端。目前界面为巴西葡萄牙语，作者邀请有兴趣的开发者加入协助改进，并帮助将其翻译成其他语言……",
+  "body_html": "<div class=\"bbWrapper\">This is the start of a project I’m working on alongside <b>Claude Code</b>.<br />\n<br />\nIt is currently in <b>Brazilian Portuguese</b>, but I invite anyone interested to join in, implement improvements, and help translate it into other languages—such as...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/release-flyff-on-browser-a-browser-server-client.1276457/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": false,
+  "slug": "1276457",
+  "title_zh": "[ 发布 ] Flyff 浏览器版——基于浏览器的服务器/客户端",
+  "excerpt_zh": "这是作者借助 Claude Code 协助开发的一个全新项目的开端。当前版本界面为巴西葡萄牙语，作者邀请有兴趣的开发者参与改进，并协助翻译成其他语言（如中文、英文等）。",
+  "summary_zh": "RageZone 用户 lettus 发布了一个基于浏览器的 FlyFF 服务器/客户端项目，采用 HTML5 + 前端渲染方案，目标是让用户无需下载传统客户端即可在浏览器中体验 FlyFF。当前版本为早期预览，界面语言为巴西葡萄牙语，作者希望社区共同参与功能完善与多语言翻译。该思路与近期 FlyFF 社区推行的 Web 客户端架构方向一致。"
+}
