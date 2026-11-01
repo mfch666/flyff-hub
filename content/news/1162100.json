@@ -1,0 +1,13 @@
+{
+  "title": "[VS17] Flyff Base source for starter V18 mixed 21",
+  "url": "https://forum.ragezone.com/threads/vs17-flyff-base-source-for-starter-v18-mixed-21.1162100/",
+  "date": "2026-10-31",
+  "source": "RageZone FlyFF Releases",
+  "author": "xlmansox",
+  "comments": 140,
+  "category": "release",
+  "excerpt": "Hi there ! here is a stable source for newbie who want to start develop flyff. 100% No backdoor \n\n\n\n\n\n\n\t\n\t\n\t\t\n\t\t\n\t\t\t#ifdef __VER &gt;= 21\n#define        __DIALY_QUEST                // Dialy Quest\n#define        __COSTUME_UPGRADE           ",
+  "body_html": "<div class=\"bbWrapper\">Hi there ! here is a stable source for newbie who want to start develop flyff. 100% No backdoor <br />\n<br />\n\n\n\n\n<blockquote data-attributes=\"\" data-quote=\"\" data-source=\"\"\n\tclass=\"bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch\">\n\t\n\t<div class=\"bbCodeBlock-content\">\n\t\t\n\t\t<div class=\"bbCodeBlock-expandContent js-expandContent \">\n\t\t\t#ifdef __VER &gt;= 21<br />\n#define        __DIALY_QUEST                // Dialy Quest<br />\n#define        __COSTUME_UPGRADE            // Costume Upgrade...\n\t\t</div>\n\t\t<div class=\"bbCodeBlock-expandLink js-expandLink\"><a role=\"button\" tabindex=\"0\">Click to expand...</a></div>\n\t</div>\n</blockquote><br />\n<a href=\"https://forum.ragezone.com/threads/vs17-flyff-base-source-for-starter-v18-mixed-21.1162100/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": true,
+  "slug": "1162100"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Retail V21 (SetLevelUpGift)",
+  "url": "https://forum.ragezone.com/threads/retail-v21-setlevelupgift.1194024/",
+  "date": "2026-10-31",
+  "source": "RageZone FlyFF Releases",
+  "author": "dAIdoom",
+  "comments": 8,
+  "category": "release",
+  "excerpt": "This is from the retail source and has been converted.\n\nReplace the entire function of:\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n\n\t\n\t\tCode:\n\t\n\t\n\t\tCEventLua::SetLevelUpGift\n\t\n\nWith:\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n\n\t\n\t\tCode:\n\t\n\t\n\t\t#ifdef __EVENTLUA_GIFT\nvoid CEventLua::Se",
+  "body_html": "<div class=\"bbWrapper\">This is from the retail source and has been converted.<br />\n<br />\n<b><span style=\"color: #FF0000\">Replace the entire function of:</span></b><br />\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n<div class=\"bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code\">\n\t<div class=\"bbCodeBlock-title\">\n\t\tCode:\n\t</div>\n\t<div class=\"bbCodeBlock-content\" dir=\"ltr\">\n\t\t<pre class=\"bbCodeCode\" dir=\"ltr\" data-xf-init=\"ozzmodz-cbhj-code-block\" data-lang=\"\"><code>CEventLua::SetLevelUpGift</code></pre>\n\t</div>\n</div><br />\n<span style=\"color: #008000\"><b>With:</b></span><br />\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n<div class=\"bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code\">\n\t<div class=\"bbCodeBlock-title\">\n\t\tCode:\n\t</div>\n\t<div class=\"bbCodeBlock-content\" dir=\"ltr\">\n\t\t<pre class=\"bbCodeCode\" dir=\"ltr\" data-xf-init=\"ozzmodz-cbhj-code-block\" data-lang=\"\"><code>#ifdef __EVENTLUA_GIFT\nvoid CEventLua::SetLevelUpGift(CUser* pUser, int nLevel)\n{\n\tif...</code></pre>\n\t</div>\n</div><br />\n<a href=\"https://forum.ragezone.com/threads/retail-v21-setlevelupgift.1194024/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": true,
+  "slug": "1194024"
+}
