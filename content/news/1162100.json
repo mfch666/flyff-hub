@@ -8,6 +8,9 @@
   "category": "release",
   "excerpt": "Hi there ! here is a stable source for newbie who want to start develop flyff. 100% No backdoor \n\n\n\n\n\n\n\t\n\t\n\t\t\n\t\t\n\t\t\t#ifdef __VER &gt;= 21\n#define        __DIALY_QUEST                // Dialy Quest\n#define        __COSTUME_UPGRADE           ",
   "body_html": "<div class=\"bbWrapper\">Hi there ! here is a stable source for newbie who want to start develop flyff. 100% No backdoor <br />\n<br />\n\n\n\n\n<blockquote data-attributes=\"\" data-quote=\"\" data-source=\"\"\n\tclass=\"bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch\">\n\t\n\t<div class=\"bbCodeBlock-content\">\n\t\t\n\t\t<div class=\"bbCodeBlock-expandContent js-expandContent \">\n\t\t\t#ifdef __VER &gt;= 21<br />\n#define        __DIALY_QUEST                // Dialy Quest<br />\n#define        __COSTUME_UPGRADE            // Costume Upgrade...\n\t\t</div>\n\t\t<div class=\"bbCodeBlock-expandLink js-expandLink\"><a role=\"button\" tabindex=\"0\">Click to expand...</a></div>\n\t</div>\n</blockquote><br />\n<a href=\"https://forum.ragezone.com/threads/vs17-flyff-base-source-for-starter-v18-mixed-21.1162100/\" class=\"link link--internal\">Read more</a></div>",
-  "needs_translation": true,
-  "slug": "1162100"
+  "needs_translation": false,
+  "slug": "1162100",
+  "title_zh": "[VS17] Flyff 起步基源 V18 混合 21",
+  "excerpt_zh": "面向刚入门 FlyFF 开发者的稳定基源，100% 无后门，适合从 V18 起步并混合 V21 特性。",
+  "summary_zh": "作者 xlmansox 发布面向初学者的稳定源码包，基于 V18 并混合部分 V21 特性，可在 Visual Studio 17 编译。作者强调无后门，并附带部分 V21 功能宏（如每日任务、时装强化等），适合想快速入门 FlyFF 服务端开发的玩家。"
 }

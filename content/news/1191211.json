@@ -1,0 +1,16 @@
+{
+  "title": "Gear Score & Other Things",
+  "url": "https://forum.ragezone.com/threads/gear-score-other-things.1191211/",
+  "date": "2026-11-07",
+  "source": "RageZone FlyFF Releases",
+  "author": "dAIdoom",
+  "comments": 27,
+  "category": "release",
+  "excerpt": "Another free release being sold by multiple people and now it&#039;s here to stay. \n\nServerCommon.h\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n\n\t\n\t\tCode:\n\t\n\t\n\t\t#define __GEAR_SCORE\n#define __NEUZ_MSGVR 00000000\n\n//feature\n#define __4TH_JOBS\n#define __ADDSHOPITEM",
+  "body_html": "<div class=\"bbWrapper\"><b>Another free release being sold by multiple people and now it&#039;s here to stay. </b><br />\n<br />\n<b>ServerCommon.h</b><br />\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n<div class=\"bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code\">\n\t<div class=\"bbCodeBlock-title\">\n\t\tCode:\n\t</div>\n\t<div class=\"bbCodeBlock-content\" dir=\"ltr\">\n\t\t<pre class=\"bbCodeCode\" dir=\"ltr\" data-xf-init=\"ozzmodz-cbhj-code-block\" data-lang=\"\"><code>#define __GEAR_SCORE\n#define __NEUZ_MSGVR 00000000\n\n//feature\n#define __4TH_JOBS\n#define __ADDSHOPITEM\n#define __AddTextColored\n#define...</code></pre>\n\t</div>\n</div><br />\n<a href=\"https://forum.ragezone.com/threads/gear-score-other-things.1191211/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": false,
+  "title_zh": "装备评分系统 & 其他功能（免费发布）",
+  "excerpt_zh": "dAIdoom 将一份曾被多人在出售的免费资源正式发布，含装备评分（__GEAR_SCORE）、第四职业、附加商店物品等宏定义。",
+  "summary_zh": "dAIdoom 公开发布了一份之前被多人私下出售的免费资源，内容包括装备评分系统（__GEAR_SCORE）、第四职业（__4TH_JOBS）、附加商店物品（__ADDSHOPITEM）、彩色文本（__AddTextColored）等 ServerCommon.h 宏定义，并附代码片段说明。",
+  "slug": "1191211"
+}

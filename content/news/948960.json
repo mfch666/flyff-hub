@@ -8,6 +8,9 @@
   "category": "release",
   "excerpt": "Hi Ragezoners,\n\nWel since many of your players dont know what the hell they do i will release the full blessed server files / Client files\n\nEverything is there to start your own server\n\nI even compiled the source so you already have the bin",
   "body_html": "<div class=\"bbWrapper\">Hi Ragezoners,<br />\n<br />\nWel since many of your players dont know what the hell they do i will release the full blessed server files / Client files<br />\n<br />\nEverything is there to start your own server<br />\n<br />\nI even compiled the source so you already have the bins...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/blessed-flyff-files.948960/\" class=\"link link--internal\">Read more</a></div>",
-  "needs_translation": true,
-  "slug": "948960"
+  "needs_translation": false,
+  "slug": "948960",
+  "title_zh": "Blessed Flyff 完整文件",
+  "excerpt_zh": "发布完整 Blessed Flyff 服务端与客户端文件，含已编译的二进制，可直接启动自己的服务器。",
+  "summary_zh": "作者 raventh1984 发布完整的 Blessed Flyff 服务端与客户端文件包，声称已包含编译好的二进制文件，玩家可直接启动自己的服务器。作者表示很多玩家不了解如何操作，因此完整放出以便社区使用。"
 }

@@ -8,6 +8,9 @@
   "category": "release",
   "excerpt": "The first release of my anti hack project called Q-protect.\nPeople who watches the development section knows some infromation already.\nDevelopment:http://forum.ragezone.com/f484/client-sided-anti-hack-c-776749/\nDownload:\n\t\n\n\tTo view the con",
   "body_html": "<div class=\"bbWrapper\">The first release of my anti hack project called Q-protect.<br />\nPeople who watches the development section knows some infromation already.<br />\nDevelopment:<a href=\"http://forum.ragezone.com/f484/client-sided-anti-hack-c-776749/\" class=\"link link--internal\">http://forum.ragezone.com/f484/client-sided-anti-hack-c-776749/</a><br />\nDownload:\n\t\n<div class=\"messageHide messageHide--link\">\n\tTo view the content, you need to sign in or register\n\n</div><br />\n<span style=\"color: #FF0000\">Non...</span><br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/q-protect-version-4.777747/\" class=\"link link--internal\">Read more</a></div>",
-  "needs_translation": true,
-  "slug": "777747"
+  "needs_translation": false,
+  "slug": "777747",
+  "title_zh": "Q-protect 反作弊系统 v4",
+  "excerpt_zh": "作者 Quget 的反外挂项目 Q-protect 首次正式发布，客户端反作弊保护，下载需登录。",
+  "summary_zh": "作者 Quget 发布其客户端反作弊项目 Q-protect 的第一版正式 Release。开发线程位于 ragezone 的 Client-Sided Anti-Hack C 版块（http://forum.ragezone.com/f484/client-sided-anti-hack-c-776749/），当前版本为 v4。下载内容需登录或注册 RageZone 账号查看，非商业用途。"
 }

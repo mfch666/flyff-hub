@@ -1,0 +1,16 @@
+{
+  "title": "[MiniRelease] CritShake",
+  "url": "https://forum.ragezone.com/threads/minirelease-critshake.1258840/",
+  "date": "2026-11-07",
+  "source": "RageZone FlyFF Releases",
+  "author": "Soturi1991",
+  "comments": 2,
+  "category": "release",
+  "excerpt": "Bei kritischen Treffern wird der Schadensanzeige ein spezieller Shake-Effekt hinzugefügt.\nAnstatt statisch zu erscheinen, wackeln die Schadenszahlen kurz, wodurch ein kritischer Treffer deutlich dynamischer und kraftvoller wirkt...\n\nRead mo",
+  "body_html": "<div class=\"bbWrapper\">Bei kritischen Treffern wird der Schadensanzeige ein spezieller <b>Shake-Effekt</b> hinzugefügt.<br />\nAnstatt statisch zu erscheinen, wackeln die Schadenszahlen kurz, wodurch ein kritischer Treffer deutlich <b>dynamischer und kraftvoller</b> wirkt...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/minirelease-critshake.1258840/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": false,
+  "title_zh": "【小发布】CritShake 暴击特效",
+  "excerpt_zh": "暴击时伤害数字附带 Shake 抖动特效，使暴击更醒目有冲击力（原文为德语）。",
+  "summary_zh": "Soturi1991 发布一个小型特效更新（CritShake）：暴击命中时，伤害数字会短暂抖动，让暴击反馈更生动、更有冲击力。原文为德语撰写。",
+  "slug": "1258840"
+}

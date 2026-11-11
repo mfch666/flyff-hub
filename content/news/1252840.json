@@ -8,6 +8,9 @@
   "category": "release",
   "excerpt": "I&#039;ve decided to release this one because I&#039;m bored.\n\n\nHere you go.\n\n\n\t\n\n\tTo view the content, you need to sign in or register\n\n\n\n\nSaying thanks won&#039;t hurt.",
   "body_html": "<div class=\"bbWrapper\">I&#039;ve decided to release this one because I&#039;m bored.<br />\n<br />\n<br />\nHere you go.<br />\n<br />\n\n\t\n<div class=\"messageHide messageHide--link\">\n\tTo view the content, you need to sign in or register\n\n</div><br />\n<br />\n<br />\nSaying thanks won&#039;t hurt.</div>",
-  "needs_translation": true,
-  "slug": "1252840"
+  "needs_translation": false,
+  "slug": "1252840",
+  "title_zh": "完整 Frenzy Flyff 文件发布",
+  "excerpt_zh": "作者出于无聊决定发布完整 Frenzy Flyff 文件，需登录 RageZone 查看下载内容。",
+  "summary_zh": "作者 dAIdoom 发布完整 Frenzy Flyff 文件包，正文需登录或注册 RageZone 账号后查看。评论量较高（59 条），说明该版本在玩家社区中有一定热度。"
 }

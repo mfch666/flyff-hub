@@ -1,0 +1,16 @@
+{
+  "title": "v19/v21 minimap fix",
+  "url": "https://forum.ragezone.com/threads/v19-v21-minimap-fix.1240136/",
+  "date": "2026-11-07",
+  "source": "RageZone FlyFF Releases",
+  "author": "NahidaIg",
+  "comments": 8,
+  "category": "release",
+  "excerpt": "Some gpus and windows versions will give you an issue with using the flyff v19 minimap that&#039;s included in just about every release, and it&#039;s because no one bothered to read and learned some DirectX in reference to a fixed function",
+  "body_html": "<div class=\"bbWrapper\">Some gpus and windows versions will give you an issue with using the flyff v19 minimap that&#039;s included in just about every release, and it&#039;s because no one bothered to read and learned some DirectX in reference to a fixed function pipeline...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/v19-v21-minimap-fix.1240136/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": false,
+  "title_zh": "V19/V21 小地图渲染修复",
+  "excerpt_zh": "部分 GPU 和 Windows 版本下，FlyFF V19 小地图（几乎所有发行版都内置）会显示异常，原因是 DirectX 固定管线渲染问题。",
+  "summary_zh": "NahidaIg 发布 V19/V21 小地图修复：部分显卡与 Windows 版本组合下，几乎所有发行版都内置的 FlyFF V19 小地图会出现渲染异常，根因是 DirectX 固定功能管线相关代码，作者在文中详细说明了修复方案。",
+  "slug": "1240136"
+}

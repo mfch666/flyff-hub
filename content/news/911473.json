@@ -1,0 +1,16 @@
+{
+  "title": "[Source] Level Flyff [Crédit : Snowerss]",
+  "url": "https://forum.ragezone.com/threads/source-level-flyff-cr%C3%A9dit-snowerss.911473/",
+  "date": "2026-11-07",
+  "source": "RageZone FlyFF Releases",
+  "author": "naruto66620",
+  "comments": 112,
+  "category": "release",
+  "excerpt": "Hello,\n\nSource by LevelFlyff.\nSource by Snowerss.\nlevel-flyff.fr/index.php\nBase : Seymour V.16 (FR)\n\nVersioncommon :\n\nDatabase :\n\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n\n\t\n\t\tCode:\n\t\n\t\n\t\t#define    __4EME_CLASSE                //4ème classes ( bretteur, titan",
+  "body_html": "<div class=\"bbWrapper\">Hello,<br />\n<br />\n<span style=\"color: #FF0000\">Source by LevelFlyff.<br />\nSource by Snowerss.<br />\nlevel-flyff.fr/index.php<br />\nBase : Seymour V.16 (FR)</span><br />\n<br />\nVersioncommon :<br />\n<br />\nDatabase :<br />\n<br />\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n<div class=\"bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code\">\n\t<div class=\"bbCodeBlock-title\">\n\t\tCode:\n\t</div>\n\t<div class=\"bbCodeBlock-content\" dir=\"ltr\">\n\t\t<pre class=\"bbCodeCode\" dir=\"ltr\" data-xf-init=\"ozzmodz-cbhj-code-block\" data-lang=\"\"><code>#define    __4EME_CLASSE                //4ème classes ( bretteur, titan, joker, artilleur, djinn, asura...</code></pre>\n\t</div>\n</div><br />\n<a href=\"https://forum.ragezone.com/threads/source-level-flyff-cr%C3%A9dit-snowerss.911473/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": false,
+  "title_zh": "【源码】Level FlyFF 源码（作者 Snowerss，法语版）",
+  "excerpt_zh": "LevelFlyff 官方源码（基于 Seymour V16 法语版），作者 Snowerss，含第四职业、数据库等配置，法国社区 Level-Flyff 出品。",
+  "summary_zh": "naruto66620 发布 LevelFlyff（法国 FlyFF 社区）官方源码，基于 Seymour V16 法语版，由 Snowerss 编写，站点 level-flyff.fr。支持第四职业（bretteur/titan/joker/炮手/djinn/asura 等）、自定义数据库宏等特性。",
+  "slug": "911473"
+}

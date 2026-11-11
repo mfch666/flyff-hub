@@ -8,6 +8,9 @@
   "category": "release",
   "excerpt": "This contains no server files or database, you must build it yourself.\n\nPrice: Free\n\nemeraldCommon.h\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n\n\t\n\t\tCode:\n\t\n\t\n\t\t//Emerald Flyff Custom Defines\n\n//#define        __LOCALNEUZ                        //Local IP or not",
   "body_html": "<div class=\"bbWrapper\"><span style=\"color: #666666\">This contains no server files or database, you must build it yourself.</span><br />\n<br />\n<b>Price: <span style=\"color: #008000\">Free<br />\n<br />\n<b>emeraldCommon.h<br />\n\n\t\n\t\n\t\n\t\n\n\t\n\n\t\n\n\t\n\n\n\n<div class=\"bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code\">\n\t<div class=\"bbCodeBlock-title\">\n\t\tCode:\n\t</div>\n\t<div class=\"bbCodeBlock-content\" dir=\"ltr\">\n\t\t<pre class=\"bbCodeCode\" dir=\"ltr\" data-xf-init=\"ozzmodz-cbhj-code-block\" data-lang=\"\"><code>//Emerald Flyff Custom Defines\n\n//#define        __LOCALNEUZ                        //Local IP or not.\n//#define...</code></pre>\n\t</div>\n</div></b></span></b><br />\n<a href=\"https://forum.ragezone.com/threads/re-release-emerald-flyff-source-client.1211471/\" class=\"link link--internal\">Read more</a></div>",
-  "needs_translation": true,
-  "slug": "1211471"
+  "needs_translation": false,
+  "slug": "1211471",
+  "title_zh": "（重发）Emerald Flyff 源码与客户端",
+  "excerpt_zh": "免费重发 Emerald Flyff 完整源码与客户端文件，不含服务端文件和数据库，需自行编译构建。",
+  "summary_zh": "作者 dAIdoom 重新发布 Emerald Flyff 项目的源码与客户端文件，完全免费。注意：包内不含服务端文件和数据库，用户需自行编译。emeraldCommon.h 中提供了多项自定义功能宏（如本地 IP、活动开关等）供配置。"
 }
