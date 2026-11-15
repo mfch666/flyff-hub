@@ -188,6 +188,7 @@ def render_page(cfg, page_title, content, nav_active="", assets_path="assets/", 
         f'<a href="{home_href}"{navcls("home")}>首页</a>'
         f'<a href="{news_href}"{navcls("news")}>新闻/发布</a>'
         f'<a href="{know_href}"{navcls("know")}>知识库</a>'
+        '<a href="https://gflyff.tommms.com" target="_blank" rel="noopener">起航/晨光</a>'
         "</nav></div></header>"
     )
     owner = cfg.get("owner", {}) or {}
@@ -332,6 +333,7 @@ def render_404(cfg):
         f'<a href="{home_href}"{navcfg("home")}>首页</a>'
         f'<a href="{news_href}"{navcfg("news")}>新闻/发布</a>'
         f'<a href="{know_href}"{navcfg("know")}>知识库</a>'
+        '<a href="https://gflyff.tommms.com" target="_blank" rel="noopener">起航/晨光</a>'
         "</nav></div></header>"
     )
 
