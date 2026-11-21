@@ -1,0 +1,15 @@
+{
+  "title": "[Release] Flyff dockerized full linux native Server & Webclient",
+  "url": "https://forum.ragezone.com/threads/release-flyff-dockerized-full-linux-native-server-webclient.1278621/",
+  "date": "2026-11-20",
+  "source": "RageZone FlyFF Releases",
+  "author": "ifyagaming",
+  "comments": 8,
+  "category": "release",
+  "excerpt": "Hey Everyone, I am very much short on time and would like to share it with you.\nNo VS needed.\nNo Windows Server needed.\nIts not my own files i just modified it.\nMany features were existant already before.\n\nProbably a cloudflare abo needed t",
+  "body_html": "<div class=\"bbWrapper\">Hey Everyone, I am very much short on time and would like to share it with you.<br />\nNo VS needed.<br />\nNo Windows Server needed.<br />\nIts not my own files i just modified it.<br />\nMany features were existant already before.<br />\n<br />\nProbably a cloudflare abo needed to...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/release-flyff-dockerized-full-linux-native-server-webclient.1278621/\" class=\"link link--internal\">Read more</a></div>",
+  "excerpt_zh": "作者因时间紧张先分享一份 Docker 化的 Flyff 完整 Linux 原生服务端 + Web 客户端方案：无需 VS、无需 Windows 服务器，文件并非原创仅做修改，很多功能此前已存在；下载链接疑似需 Cloudflare 订阅，详情见原文。",
+  "title_zh": "[发布] Flyff 容器化（Docker）完整 Linux 原生服务端 & Web 客户端",
+  "needs_translation": false,
+  "slug": "1278621"
+}

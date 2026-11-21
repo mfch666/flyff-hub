@@ -1,0 +1,16 @@
+{
+  "title": "[Release] cFlyFF - Unpacked and Converted Resources",
+  "url": "https://forum.ragezone.com/threads/release-cflyff-unpacked-and-converted-resources.1278333/",
+  "date": "2026-11-17",
+  "source": "RageZone FlyFF Releases",
+  "author": "0xCifra",
+  "comments": 1,
+  "title_zh": "【发布】cFlyFF —— 已解包并转换的客户端资源",
+  "excerpt_zh": "我解包了一份较新的 cFlyFF 客户端（解包时 Neuz 报告显示补丁日期为 11 月 9 日）。这些转换后的资源按原样提供，部分仅能直接加载，不保证完整可用。",
+  "summary_zh": "作者 0xCifra 发布了一份较新的 cFlyFF 客户端解包并转换后的资源（Neuz 显示补丁日期为 11 月 9 日）。资源按原样（as is）提供，许多部分可直接加载，但并不保证与最新环境完全兼容，使用时需自行校验。",
+  "category": "release",
+  "excerpt": "Hey all.\n\nI unpacked a recent cFlyFF client (Neuz reported 9th November patch date when I unpacked it).\n\nI decided to release converted client resources from a recent up-to-date client. These are provided as is and a lot of it will just loa",
+  "body_html": "<div class=\"bbWrapper\">Hey all.<br />\n<br />\nI unpacked a recent cFlyFF client (Neuz reported 9th November patch date when I unpacked it).<br />\n<br />\nI decided to release converted client resources from a recent up-to-date client. These are provided as is and a lot of it will just load into...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/release-cflyff-unpacked-and-converted-resources.1278333/\" class=\"link link--internal\">Read more</a></div>",
+  "needs_translation": false,
+  "slug": "1278333"
+}
