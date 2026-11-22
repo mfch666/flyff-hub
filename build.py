@@ -28,9 +28,12 @@ def load_news():
     if CONTENT_NEWS.exists():
         for f in sorted(CONTENT_NEWS.glob("*.json")):
             try:
-                items.append(json.loads(f.read_text(encoding="utf-8")))
+                it = json.loads(f.read_text(encoding="utf-8"))
             except Exception:
-                pass
+                continue
+            if it.get("hidden"):
+                continue
+            items.append(it)
     items.sort(key=lambda x: x.get("date", ""), reverse=True)
     return items
 
