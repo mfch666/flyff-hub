@@ -1,0 +1,15 @@
+{
+  "title": "T Files DX11",
+  "url": "https://forum.ragezone.com/threads/t-files-dx11.1267078/",
+  "date": "2026-11-21",
+  "source": "RageZone FlyFF Releases",
+  "author": "Tweek",
+  "comments": 16,
+  "category": "release",
+  "excerpt": "Hey everyone!\n\nI&#039;ve ported the Flyff v15 source to DirectX 11 and wanted to share the first version with you here. It runs stable so far.\n\nso feel free to test it and let me know if you run into anything.\n\n\n\n\n\nFeedback, bug reports, an",
+  "title_zh": "T Files DX11：Flyff v15 源码移植到 DirectX 11",
+  "excerpt_zh": "作者将 Flyff v15 源码移植到 DirectX 11，并分享首个版本：目前运行稳定，欢迎测试反馈、报告 bug；原文附有运行截图，正文需登录论坛查看完整内容。",
+  "needs_translation": false,
+  "body_html": "<div class=\"bbWrapper\">Hey everyone!<br />\n<br />\nI&#039;ve ported the Flyff v15 source to DirectX 11 and wanted to share the first version with you here. It runs stable so far.<br />\n<br />\nso feel free to test it and let me know if you run into anything.<br />\n<br />\n<img src=\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' width='1678' height='1080' viewBox%3D'0 0 1678 1080'%2F%3E\" data-src=\"https://forum.ragezone.com/attachments/screenshot-2026-06-17-125833-webp.303479/\"\n\t\t\tclass=\"bbImage  lazyload\"\n\t\t\tstyle=\"\"\n\t\t\talt=\"Screenshot 2026-06-17 125833 - T Files DX11 - RaGEZONE Forums\"\n\t\t\ttitle=\"Screenshot 2026-06-17 125833 - T Files DX11 - RaGEZONE Forums\"\n\t\t\twidth=\"1678\" height=\"1080\"  />\n\n<noscript><img src=\"https://forum.ragezone.com/attachments/screenshot-2026-06-17-125833-webp.303479/\"\n\t\t\tclass=\"bbImage \"\n\t\t\tstyle=\"\"\n\t\t\talt=\"Screenshot 2026-06-17 125833 - T Files DX11 - RaGEZONE Forums\"\n\t\t\ttitle=\"Screenshot 2026-06-17 125833 - T Files DX11 - RaGEZONE Forums\"\n\t\t\twidth=\"1678\" height=\"1080\"  /></noscript><br />\n<br />\nFeedback, bug reports, and...<br />\n<br />\n<a href=\"https://forum.ragezone.com/threads/t-files-dx11.1267078/\" class=\"link link--internal\">Read more</a></div>",
+  "slug": "1267078"
+}
